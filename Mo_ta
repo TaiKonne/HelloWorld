@@ -1,12 +1,6 @@
 
 
 Tên đề tài: Quản Lí Nhân Viên của công ty lập trình ABC
-Thành viên: 
-    + Nguyễn Văn Minh - 2124802010126
-    + Nguyễn Quốc Dũng - 2124802010008
-    + Nguyễn Tấn Tài - 2124802010067
-    + Nguyễn Thị Thanh Hằng - 2124802050024
-
 Mô tả đề tài: 
 Mỗi nhân viên (Employee) được công ty chia thành 3 loại sau: Nhân viên có kinh nghiệm lâu năm (Experience), nhân viên mới ra trường (Fresher) , Nhân viên thực tập (Intern).
 Tất các Employee đề có các thuộc tính chung: 
