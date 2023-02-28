@@ -8,6 +8,7 @@ import Component.DateTime;
 public class Experience extends Employee {
     int expyear;
     ArrayList<String> proSkill = new ArrayList<String>();
+
     Scanner sc = new Scanner(System.in);
     public Experience(){}
     public Experience(int expyear, ArrayList<String> proSkill) {
@@ -59,7 +60,6 @@ public class Experience extends Employee {
             String l = new String();
             l = sc.nextLine();
             skill.add(l);
-            sc.nextLine();
         }
         this.expyear = y;
         this.proSkill = skill;
