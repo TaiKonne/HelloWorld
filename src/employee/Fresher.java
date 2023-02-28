@@ -5,6 +5,7 @@ public class Fresher extends Employee {
     DateTime gradate;
     String grarank;
     String schoolname;
+    Scanner sc = new Scanner(System.in);
     public Fresher() {}
     public Fresher(DateTime gradate, String grarank, String schoolname) {
         this.gradate = gradate;
@@ -48,6 +49,32 @@ public class Fresher extends Employee {
             ", grarank='" + getGrarank() + "'" +
             ", schoolname='" + getSchoolname() + "'" +
             "}";
+    }
+    public void Input()
+    {
+
+        super.Input();
+        System.out.println("Thoi gian tot nghiep: ");
+        DateTime t = new DateTime();
+        t.Input();
+
+        System.out.println("Loai tot nghiep: ");
+        String h = new String();
+        h = sc.nextLine();
+
+        System.out.println("Ten truong: ");
+        String z = new String();
+        z= sc.nextLine();
+
+        this.gradate = t;
+        this.grarank = h;
+        this.schoolname = z;
+    }
+    public void Output()
+    {
+        super.Output();
+        System.out.println("Thoi gian tot nghiep: " + this.getGradate().getDay() + "/" + this.getGradate().getMonth() + "/" + this.getGradate().getYear() 
+        + '\n' + "Loai tot nghiep: "+ this.getGrarank() +  '\n' + "Ten truong: " + this.getSchoolname());
     }
 
 }

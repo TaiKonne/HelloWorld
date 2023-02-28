@@ -6,7 +6,7 @@ public abstract class Employee {
     protected String id,fullname,phone,email;
     protected DateTime birthday;
     protected ArrayList<Certificate> certificates;
-
+    Scanner sc = new Scanner(System.in);
 
     public Employee() {
     }
@@ -67,4 +67,52 @@ public abstract class Employee {
         this.certificates = certificates;
     }
 
+    public void Input()
+    {
+        System.out.println("Ma Nhan Vien: ");
+        String a= new String();
+        a=sc.nextLine();
+        System.out.println("Ho & ten: ");
+        String b= new String();
+        b=sc.nextLine();
+
+        System.out.println("So dien thoai: ");
+        String c= new String();
+        c= sc.nextLine();
+
+        System.out.println("Email: ");
+        String d= new String();
+        d=sc.nextLine();
+        
+        System.out.println("Ngay Thang Nam sinh: ");
+        DateTime dt = new DateTime();
+        dt.Input();
+
+        System.out.println("So luong bang cap: ");
+        ArrayList<Certificate> cer = new ArrayList<Certificate>();
+        int n = sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            Certificate k = new Certificate();
+            k.Input();
+            cer.add(k);
+        }
+        this.id = a;
+        this.fullname = b;
+        this.phone = c;
+        this.email = d;
+        this.birthday = dt;
+        this.certificates = cer;
+    }
+    
+    public void Output()
+    {
+        System.out.println("Id: "+ this.getId() + '\n' + "Ho & Ten: " + this.getFullname() + '\n' + "sdt: " + this.getPhone() + '\n' + "Email: " + this.getEmail());
+        System.out.println("Ngay sinh: " + this.getBirthday().getDay() + "/" + this.getBirthday().getMonth() + "/" + this.getBirthday().getYear());
+        System.out.println("| Bang cap: ");
+        for(int i=0;i<certificates.size();i++)
+        {
+            System.out.println( '\t' + "" + certificates.get(i));
+        }
+    }
 }

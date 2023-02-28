@@ -1,8 +1,10 @@
 package employee;
 
+import java.util.Scanner;
+
 public class Certificate {
     String cerID,cerName,cerRank;
-
+    Scanner sc = new Scanner(System.in);
     public Certificate() {
     }
 
@@ -37,10 +39,22 @@ public class Certificate {
     }
     @Override
     public String toString() {
-        return "{" +
-            " cerID='" + getCerID() + "'" +
-            ", cerName='" + getCerName() + "'" +
-            ", cerRank='" + getCerRank() + "'" +
-            "}";
+        return "Id:" + this.getCerID() + " | Ten bang: " + this.getCerName() + " | Xep loai: " + this.getCerRank();
     }
+    public void Input()
+    {
+        System.out.println("Ma bang cap: ");
+        String a = new String();
+        a = sc.nextLine();
+        System.out.println("Ten bang cap: ");
+        String b = new String();
+        b = sc.nextLine();
+        System.out.println("Xep loai: ");
+        String c= new String();
+        c= sc.nextLine();
+        this.cerID = a;
+        this.cerName = b; 
+        this.cerRank = c;
+    }
+    
 }

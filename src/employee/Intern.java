@@ -4,6 +4,7 @@ import Component.DateTime;
 public class Intern extends Employee{
     String major, schoolname;
     int semester;
+    Scanner sc = new Scanner(System.in);
     public Intern() {
     }
     public Intern(String major, String schoolname, int semester) {
@@ -40,5 +41,28 @@ public class Intern extends Employee{
 
     public void setSemester(int semester) {
         this.semester = semester;
+    }
+
+    public void Input()
+    {
+        super.Input();
+        System.out.println("Ten chuyen nganh: ");
+        String h = new String();
+        h = sc.nextLine();
+
+        System.out.println("Ten truong: ");
+        String z = new String();
+        z= sc.nextLine();
+
+        System.out.println("Hoc ki dang hoc: ");
+        int zz = sc.nextInt();
+        this.major = h;
+        this.schoolname = z;
+        this.semester = zz;
+    }
+    public void Output()
+    {
+        super.Output();
+        System.out.println("Ten chuyen nganh:" + this.getMajor() +  '\n' + "Ten truong:" + this.getSchoolname() +  '\n' + "Hoc ki: " + this.getSemester());
     }
 }

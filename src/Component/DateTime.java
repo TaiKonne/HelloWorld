@@ -1,8 +1,10 @@
 package Component;
 
+import java.util.Scanner;
+
 public class DateTime {
     int day,month,year;
-
+    Scanner sc = new Scanner(System.in);
     public DateTime() {
     }
 
@@ -43,5 +45,16 @@ public class DateTime {
             ", year='" + getYear() + "'" +
             "}";
     }
-
+    public void Input()
+    {
+        System.out.println("Ngay: ");
+        int dd = sc.nextInt();
+        System.out.println("Thang: ");
+        int mm = sc.nextInt();
+        System.out.println("Nam: ");
+        int yyyy = sc.nextInt();
+        this.day = dd;
+        this.month = mm;
+        this.year = yyyy;
+    }
 }
