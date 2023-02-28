@@ -1,0 +1,42 @@
+
+
+Tên đề tài: Quản Lí Nhân Viên của công ty lập trình ABC
+Thành viên: 
+    + Nguyễn Văn Minh - 2124802010126
+    + Nguyễn Quốc Dũng - 2124802010008
+    + Nguyễn Tấn Tài - 2124802010067
+    + Nguyễn Thị Thanh Hằng - 2124802050024
+
+Mô tả đề tài: 
+Mỗi nhân viên (Employee) được công ty chia thành 3 loại sau: Nhân viên có kinh nghiệm lâu năm (Experience), nhân viên mới ra trường (Fresher) , Nhân viên thực tập (Intern).
+Tất các Employee đề có các thuộc tính chung: 
+    + ID: Mã nhân viên 
+    + FullName: Họ và tên đầy đủ của nhân viên
+    + BirthDay: Sinh nhật của nhân viên
+    + Phone : Số điện thoại liên lạc của nhân  viên
+    + Employee_type: Loại nhân viên ( 0 : Experience , 1: Fresher , 2: Intern )
+    + Employee_cnt : Số lượng nhân viên của công ty.
+Ngoài ra:
+    + Experience : có thêm 2 thuộc tính: 
+        - Số năm kinh nghiệm (ExpYear)
+        - Kỹ năng chuyên môn ( ProSkill)        
+    +Fresher: có thêm 3 kỹ năng
+        - Năm tốt nghiệp
+        - Xếp loại tốt nghiệp
+        - Trường tốt nghiệp 
+    +Intern: có thêm 3 thuộc tính
+        - Chuyên ngành 
+        - Học kì đang học
+        - Trường tốt nghiệp
+Bên cạnh đó: Mỗi nhân viên khi được thêm vào công ty cần phải nộp bằng cấp (mỗi nhân viên có thể có nhiều bằng cấp ) gồm:
+    + Mã bằng cấp 
+    + Tên bằng cấp 
+    + Loại bằng cấp
+    + Ngày bằng được cấp
+Yêu cầu dự kiến: 
+    1.Xây dựng chức năng tìm kiếm nhân viên ( nhập loại nhân viên hoặc ID nhân viên)
+    2.Xây dựng chức năng thêm nhân viên (0: Experience , 1: Fresher , 2 : Intern , còn lại : Dừng )
+    3.Xây dựng chức năng xóa nhân viên ( Nhập ID nhân viên)
+    4.Xây dựng chức năng sửa thông tin nhân viên ( nhập ID nhân viên -> hiện ra menu chọn thông tin cần sửa , nhập 0 để dừng lại )
+    5.Xây dựng chức năng tăng lương cho nhân viên có số năm làm việc từ X năm lên k% lương hiện tại của nhân viên đó.
+
