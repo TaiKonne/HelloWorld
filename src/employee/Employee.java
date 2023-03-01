@@ -6,18 +6,20 @@ public abstract class Employee {
     protected String id,fullname,phone,email;
     protected DateTime birthday;
     protected ArrayList<Certificate> certificates;
+    protected double salary;
     Scanner sc = new Scanner(System.in);
 
     public Employee() {
     }
 
-    public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates) {
+    public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, double salary) {
         this.id = id;
         this.fullname = fullname;
         this.phone = phone;
         this.email = email;
         this.birthday = birthday;
         this.certificates = certificates;
+        this.salary = salary;
     }
     public String getId() {
         return this.id;
@@ -66,7 +68,14 @@ public abstract class Employee {
     public void setCertificates(ArrayList<Certificate> certificates) {
         this.certificates = certificates;
     }
-
+    public double getSalary()
+    {
+        return this.salary;
+    }
+    public  void setSalary(double salarys)
+    {
+        this.salary = salarys;
+    }
     public void Input()
     {
         System.out.println("Ma Nhan Vien: ");
@@ -97,12 +106,16 @@ public abstract class Employee {
             k.Input();
             cer.add(k);
         }
+
+        System.out.println("Luong: ");
+        double luong  = sc.nextDouble();
         this.id = a;
         this.fullname = b;
         this.phone = c;
         this.email = d;
         this.birthday = dt;
         this.certificates = cer;
+        this.salary = luong;
     }
     
     public void Output()
@@ -114,5 +127,7 @@ public abstract class Employee {
         {
             System.out.println( '\t' + "" + certificates.get(i));
         }
+        System.out.println("Luong: " + this.getSalary());
+        
     }
 }

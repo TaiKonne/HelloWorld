@@ -15,9 +15,9 @@ public class Experience extends Employee {
         this.expyear = expyear;
         this.proSkill = proSkill;
     }
-    public Experience(String id, String fullname , String phone , String email, DateTime birthday , ArrayList<Certificate> certificates , int expyear , ArrayList<String> proskill)
+    public Experience(String id, String fullname , String phone , String email, DateTime birthday , ArrayList<Certificate> certificates, double salary , int expyear , ArrayList<String> proskill)
     {
-        super(id, fullname, phone, email, birthday, certificates);
+        super(id, fullname, phone, email, birthday, certificates, salary);
         this.expyear = expyear;
         this.proSkill = proSkill;
     }
@@ -54,9 +54,10 @@ public class Experience extends Employee {
 
         System.out.println("So ky nang chuyen nganh: ");
         int kn = sc.nextInt();
+        sc.nextLine();
         ArrayList<String> skill = new ArrayList<String>();
         for(int i=0;i<kn;i++)
-        {
+        {   System.out.println("Ten ky nang: ");
             String l = new String();
             l = sc.nextLine();
             skill.add(l);
