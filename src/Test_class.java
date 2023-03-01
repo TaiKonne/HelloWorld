@@ -7,7 +7,7 @@ public class Test_class {
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> a = new ArrayList<Employee>();
         ManageFactory b = new ManageFactory(a);
-        System.out.println("Chon Menu: ");
+        System.out.println("Chon cac muc trong Menu: ");
         System.out.println("0. Thoat" +'\n' +"1. Them Nhan Vien" +'\n' +"2. In "+'\n'+ "3. Sua Thong Tin" +'\n' +"4. Xoa Thong Tin" +'\n' +"5. Tim Kiem Nhan Vien" +'\n' + "6. Tang Luong Nhan Vien");
         int n=0;
         while(true)
