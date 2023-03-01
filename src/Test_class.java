@@ -23,7 +23,10 @@ public class Test_class {
         // b.FindEmployee(k);
         // System.out.println(ans);
         //Sua
-        b.EditInfor(k);
+        // b.EditInfor(k);
+        // b.Output();
+        //Update luong
+        b.UpdateSalary();
         b.Output();
         sc.close();
     }

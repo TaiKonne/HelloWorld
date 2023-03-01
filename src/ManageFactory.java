@@ -355,4 +355,25 @@ public class ManageFactory {
             }
         }
     }
+
+    public void UpdateSalary()
+    {
+        System.out.println("Nam can xet: ");
+        int yy = sc.nextInt();
+        System.out.println("Phan tram luong muon tang:");
+        int percent = sc.nextInt();
+        sc.nextLine();
+        for(int i=0;i<a.size();i++)
+        {
+            if(a.get(i) instanceof Experience)
+            {
+                Experience t = (Experience) a.get(i);
+                if(t.getExpyear() >= yy)
+                {
+                    double x = t.getSalary()* percent / 100;
+                    t.setSalary(t.getSalary() + x);
+                }
+            }
+        }
+    }
 }
