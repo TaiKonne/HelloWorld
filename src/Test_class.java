@@ -15,11 +15,16 @@ public class Test_class {
         System.out.println("Nhap Id can tim: ");
         String k = new String();
         k= sc.next();
-        b.RemoveEmployee(k);
-        System.out.println("Sau khi xoa: ");
-        b.Output();
+        //Xoa
+        // b.RemoveEmployee(k);
+        // System.out.println("Sau khi xoa: ");
+        // b.Output();
+        //Tim
         // b.FindEmployee(k);
         // System.out.println(ans);
+        //Sua
+        b.EditInfor(k);
+        b.Output();
         sc.close();
     }
 }
