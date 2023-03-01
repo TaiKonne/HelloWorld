@@ -6,54 +6,63 @@ import Component.*;
 
 public class ManageFactory {
     private ArrayList<Employee> a  = new ArrayList<Employee>();
-    private int n;
     Scanner sc = new Scanner(System.in);
 
     public ManageFactory() {
     }
 
-    public ManageFactory(ArrayList<Employee> a, int n) {
+    public ManageFactory(ArrayList<Employee> a) {
         this.a = a;
-        this.n = n;
     }
 
     public void Input()
     {
         int type;
-        for(int i=0;i<n;i++)
-        {
+        do{
             System.out.println("Nhap lua chon: " + "1. Experience"  + "| 2. Fresher" + "| 3. Intern");
             type =sc.nextInt();
+            if(type!=1 && type!=2 && type!=3)
+            {
+                System.out.println("Nhap lai! ");
+                System.out.println("Nhap lua chon: " + "1. Experience"  + "| 2. Fresher" + "| 3. Intern");
+            }
             if(type==1)
             {
                 Experience k = new Experience();
                 k.Input();
                 a.add(k);
+                return;
             }
             else if(type==2)
             {
                 Fresher k = new Fresher();
                 k.Input();
                 a.add(k);
+                return;
             }
             else if(type==3)
             {
                 Intern k = new Intern();
                 k.Input();
                 a.add(k);
+                return;
             }
-            else i--;
         }
+        while(type!=1 && type!=2 && type!=3);
     }
     public void Output()
     {
+        System.out.println("Danh sach nhan vien:");
         for(int i=0;i<a.size();i++)
         {
             a.get(i).Output();
         }
     }
-    public void FindEmployee(String ids) //Tim thay la xuat thong tin ra
+    public void FindEmployee() //Tim thay la xuat thong tin ra
     {
+        System.out.println("Nhap Id can tim: ");
+        String ids = new String();
+        ids = sc.next();
         int k = -1;
         for(int i=0;i<a.size();i++)
         {
@@ -68,8 +77,11 @@ public class ManageFactory {
         else a.get(k).Output();
     }
 
-    public void RemoveEmployee(String ids)
+    public void RemoveEmployee()
     {
+        System.out.println("Nhap Id can tim: ");
+        String ids = new String();
+        ids = sc.next();
         int k = -1;
         for(int i=0;i<a.size();i++)
         {
@@ -83,8 +95,11 @@ public class ManageFactory {
             System.out.println("Not found");
         else a.remove(k);
     }
-    public void EditInfor(String ids)
+    public void EditInfor()
     {
+        System.out.println("Nhap Id can tim: ");
+        String ids = new String();
+        ids = sc.next();
         int k = -1;
         for(int i=0;i<a.size();i++)
         {
@@ -246,11 +261,11 @@ public class ManageFactory {
                 else if(choose == 7)
                 {
                     System.out.println("Thoi gian tot nghiep moi:");
-                    System.out.println('\t' + "Ngay:");
+                    System.out.println('\t' + "Ngay tot nghiep:");
                     int dd = sc.nextInt();
-                    System.out.println('\t' + "Thang:");
+                    System.out.println('\t' + "Thang tot nghiep:");
                     int mm = sc.nextInt();
-                    System.out.println('\t' + "Nam:");
+                    System.out.println('\t' + "Nam tot nghiep:");
                     int yy = sc.nextInt();
                     DateTime newgraDate = new DateTime(dd,mm,yy);
                     tmp.setGradate(newgraDate);

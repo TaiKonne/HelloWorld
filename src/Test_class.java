@@ -3,31 +3,45 @@ import employee.*;
 import Component.*;
 
 public class Test_class {
-    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         ArrayList<Employee> a = new ArrayList<Employee>();
-        System.out.println("Nhap so luong nhan vien can them: ");
-        int n =sc.nextInt();
-        ManageFactory b = new ManageFactory(a,n);
-        b.Input();
-        b.Output();
-        System.out.println("Nhap Id can tim: ");
-        String k = new String();
-        k= sc.next();
-        //Xoa
-        // b.RemoveEmployee(k);
-        // System.out.println("Sau khi xoa: ");
-        // b.Output();
-        //Tim
-        // b.FindEmployee(k);
-        // System.out.println(ans);
-        //Sua
-        // b.EditInfor(k);
-        // b.Output();
-        //Update luong
-        b.UpdateSalary();
-        b.Output();
-        sc.close();
+        ManageFactory b = new ManageFactory(a);
+        System.out.println("Chon Menu: ");
+        System.out.println("0. Thoat" +'\n' +"1. Them Nhan Vien" +'\n' +"2. In "+'\n'+ "3. Sua Thong Tin" +'\n' +"4. Xoa Thong Tin" +'\n' +"5. Tim Kiem Nhan Vien" +'\n' + "6. Tang Luong Nhan Vien");
+        int n=0;
+        while(true)
+        {
+            System.out.println("Nhap lua chon: ");
+            n =sc.nextInt();
+            if(n==1)
+            {
+                b.Input();
+            }
+            else if(n==2)
+            {
+                b.Output();
+            }
+            else if(n==3)
+            {
+                b.EditInfor();
+            }
+            else if(n==4)
+            {
+                b.RemoveEmployee();
+            }
+            else if(n==5)
+            {
+                b.FindEmployee();
+            }
+            else if(n==6)
+            {
+                b.UpdateSalary();
+            }
+            else if(n==0)
+            {
+                return;
+            }
+        }
     }
 }
