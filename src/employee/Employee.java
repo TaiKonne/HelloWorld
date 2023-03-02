@@ -117,6 +117,7 @@ public abstract class Employee {
             k.Input();
             cer.add(k);
         }
+        
         System.out.println("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();

@@ -41,8 +41,8 @@ public class Experience extends Employee {
     public String toString() {
 
         return "" + 
-            " expyear='" + getExpyear() + "'" +
-            ", proSkill='" + getProSkill() + "'" +
+            " expyear='" + this.getExpyear() + "'" +
+            ", proSkill='" + this.getProSkill() + "'" +
             "";
     }
     // String id, String fullname , String phone , String email, DateTime birthday , ArrayList<Certificate> certificates , int expyear , ArrayList<String> proskill
