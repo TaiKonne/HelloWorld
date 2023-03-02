@@ -13,15 +13,6 @@ public abstract class Employee {
     public Employee() {
     }
 
-    public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, double salary) {
-        this.id = id;
-        this.fullname = fullname;
-        this.phone = phone;
-        this.email = email;
-        this.birthday = birthday;
-        this.certificates = certificates;
-        this.salary = salary;
-    }
     public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary) {
         this.id = id;
         this.fullname = fullname;
@@ -87,6 +78,16 @@ public abstract class Employee {
     {
         this.salary = salarys;
     }
+
+    public ArrayList<Company> getCompany()
+    {
+        return this.companies;
+    }
+    public void setCompany(ArrayList<Company> companies)
+    {
+        this.companies =  companies;
+    }
+
     public void Input()
     {
         System.out.println("Ma Nhan Vien: ");
@@ -117,6 +118,7 @@ public abstract class Employee {
             k.Input();
             cer.add(k);
         }
+
         System.out.println("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();
@@ -128,6 +130,7 @@ public abstract class Employee {
         }
         System.out.println("Luong: ");
         double luong  = sc.nextDouble();
+        
         this.id = a;
         this.fullname = b;
         this.phone = c;

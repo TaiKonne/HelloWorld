@@ -391,4 +391,29 @@ public class ManageFactory {
             }
         }
     }
+    
+    public void WorkHistory() 
+    {
+        System.out.println("Nhap Id can tim: ");
+        String ids = new String();
+        ids = sc.next();
+        int k = -1;
+        for(int i=0;i<a.size();i++)
+        {
+            if(ids.equals(a.get(i).getId()))
+            {
+                k=i;
+                break;
+            }
+        }  
+        if(k == -1)
+            System.out.println("Not found");
+        else 
+        {
+            for (int j = 0; j < a.get(k).getCompany().size(); j++) 
+            {
+                System.out.println(a.get(j).getCompany());
+            }
+        }
+    }
 }

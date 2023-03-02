@@ -3,20 +3,44 @@ package employee;
 import java.util.Scanner;
 
 public class Company {
-
-    protected String companyName;
-    protected String companyReview;
-    protected int rating;
+    String companyName;
+    String companyReview;
+    String rating;
     Scanner sc = new Scanner(System.in);
     public Company() {}
-    public Company(String companyName, String companyReview, int rating) {
+    public Company(String companyName, String companyReview, String rating) {
         this.companyName = companyName;
         this.companyReview = companyReview;
         this.rating = rating;
     }
+
+    public String getCompanyName() {
+        return this.companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getCompanyReview() {
+        return this.companyReview;
+    }
+
+    public void setCompanyReview(String companyReview) {
+        this.companyReview = companyReview;
+    }
+
+    public String getRating() {
+        return this.rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
     @Override
     public String toString() {
-        return "Ten cong ty nhan vien tung lam viec: " + this.companyName + " | Danh gia cua cong ve nhan vien: " + this.companyReview + " | Xep loai: " + this.rating;
+        return "Ten cong ty: " + this.companyName + " | Danh gia: " + this.companyReview + " | Xep loai: " + this.rating;
     }
     public void Input()
     {
@@ -27,7 +51,8 @@ public class Company {
         String b = new String();
         b = sc.nextLine();
         System.out.println("Xep loai: ");
-        int rating = sc.nextInt();
+        String rating = new String();
+        rating = sc.nextLine();
         this.companyName = a;
         this.companyReview = b; 
         this.rating = rating;

@@ -15,6 +15,7 @@ public class Test_class {
         {
             System.out.println("Nhap lua chon: ");
             n =sc.nextInt();
+            sc.nextLine();
             if(n==1)
             {
                 b.Input();
@@ -40,12 +41,11 @@ public class Test_class {
                 b.UpdateSalary();
             }
             else if(n==7) {
-                
+                b.WorkHistory();
             }
+
             else if(n==0)
-            {
                 return;
-            }
         }
     }
 }
