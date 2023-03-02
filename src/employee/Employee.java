@@ -119,6 +119,7 @@ public abstract class Employee {
             cer.add(k);
         }
 
+        
         System.out.println("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();
@@ -130,7 +131,7 @@ public abstract class Employee {
         }
         System.out.println("Luong: ");
         double luong  = sc.nextDouble();
-        
+
         this.id = a;
         this.fullname = b;
         this.phone = c;
