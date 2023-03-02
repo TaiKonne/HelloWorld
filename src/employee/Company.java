@@ -16,7 +16,7 @@ public class Company {
     }
     @Override
     public String toString() {
-        return "Ten cong ty nhan vien tung lam viec: " + this.companyName + " | Danh gia cua cong ty: " + this.companyReview + " | Xep loai: " + this.rating;
+        return "Ten cong ty nhan vien tung lam viec: " + this.companyName + " | Danh gia cua cong ve nhan vien: " + this.companyReview + " | Xep loai: " + this.rating;
     }
     public void Input()
     {
