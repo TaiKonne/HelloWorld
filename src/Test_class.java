@@ -42,6 +42,10 @@ public class Test_class {
             else if(n==7) {
                 
             }
+            else if(n==8)
+            {
+                b.SortEmployee();
+            }
             else if(n==0)
             {
                 return;
