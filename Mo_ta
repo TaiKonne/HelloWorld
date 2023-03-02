@@ -33,4 +33,4 @@ Yêu cầu dự kiến:
     3.Xây dựng chức năng xóa nhân viên ( Nhập ID nhân viên)
     4.Xây dựng chức năng sửa thông tin nhân viên ( nhập ID nhân viên -> hiện ra menu chọn thông tin cần sửa , nhập 0 để dừng lại )
     5.Xây dựng chức năng tăng lương cho nhân viên  lau nam có số năm làm việc từ X năm lên k% lương hiện tại của nhân viên đó.
-
+    5. Xây dựng chức năng xem lịch sử các công ty mà nhân viên đó đã làm việc qua và xem đánh giá của công ty đó về nhân viên.

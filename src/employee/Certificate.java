@@ -13,7 +13,7 @@ public class Certificate {
         this.cerName = cerName;
         this.cerRank = cerRank;
     }
-
+    
     public String getCerID() {
         return this.cerID;
     }

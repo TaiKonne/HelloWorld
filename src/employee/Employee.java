@@ -6,6 +6,7 @@ public abstract class Employee {
     protected String id,fullname,phone,email;
     protected DateTime birthday;
     protected ArrayList<Certificate> certificates;
+    protected ArrayList<Company> companies;
     protected double salary;
     Scanner sc = new Scanner(System.in);
 
@@ -19,6 +20,16 @@ public abstract class Employee {
         this.email = email;
         this.birthday = birthday;
         this.certificates = certificates;
+        this.salary = salary;
+    }
+    public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary) {
+        this.id = id;
+        this.fullname = fullname;
+        this.phone = phone;
+        this.email = email;
+        this.birthday = birthday;
+        this.certificates = certificates;
+        this.companies = companies;
         this.salary = salary;
     }
     public String getId() {
@@ -106,7 +117,15 @@ public abstract class Employee {
             k.Input();
             cer.add(k);
         }
-
+        System.out.println("So luong cong ty da lam viec: ");
+        ArrayList<Company> com = new ArrayList<Company>();
+        n = sc.nextInt();
+        for(int i=0;i<n;i++)
+        {
+            Company k = new Company();
+            k.Input();
+            com.add(k);
+        }
         System.out.println("Luong: ");
         double luong  = sc.nextDouble();
         this.id = a;
@@ -115,6 +134,7 @@ public abstract class Employee {
         this.email = d;
         this.birthday = dt;
         this.certificates = cer;
+        this.companies = com;
         this.salary = luong;
     }
     
@@ -126,6 +146,11 @@ public abstract class Employee {
         for(int i=0;i<certificates.size();i++)
         {
             System.out.println( '\t' + "" + certificates.get(i));
+        }
+        System.out.println("| Lich su lam viec: ");
+        for(int i=0;i< this.companies.size();i++)
+        {
+            System.out.println( '\t' + "" + this.companies.get(i).toString());
         }
         System.out.println("Luong: " + this.getSalary());
         
