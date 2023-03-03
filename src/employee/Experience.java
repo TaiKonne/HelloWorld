@@ -2,8 +2,6 @@ package employee;
 
 import java.util.*;
 
-import javax.print.DocFlavor.STRING;
-
 import Component.DateTime;
 public class Experience extends Employee {
     int expyear;
@@ -19,7 +17,7 @@ public class Experience extends Employee {
     {
         super(id, fullname, phone, email, birthday, certificates,companies ,salary);
         this.expyear = expyear;
-        this.proSkill = proSkill;
+        this.proSkill = proskill;
     }
     public int getExpyear() {
         return this.expyear;
