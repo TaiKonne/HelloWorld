@@ -13,7 +13,7 @@ public class Test_class {
         int n=0;
         while(true)
         {
-            System.out.println("Nhap lua chon: ");
+            System.out.print("Nhap lua chon: ");
             n =sc.nextInt();
             sc.nextLine();
             if(n==1)

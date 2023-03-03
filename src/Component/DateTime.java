@@ -47,11 +47,11 @@ public class DateTime {
     }
     public void Input()
     {
-        System.out.println("Ngay: ");
+        System.out.print('\t'+"Ngay:  ");
         int dd = sc.nextInt();
-        System.out.println("Thang: ");
+        System.out.print('\t'+"Thang: ");
         int mm = sc.nextInt();
-        System.out.println("Nam: ");
+        System.out.print('\t'+"Nam: ");
         int yyyy = sc.nextInt();
         this.day = dd;
         this.month = mm;

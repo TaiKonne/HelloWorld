@@ -44,13 +44,13 @@ public class Company {
     }
     public void Input()
     {
-        System.out.println("Ten cong ty: ");
+        System.out.print('\t'+ "Ten cong ty: ");
         String a = new String();
         a = sc.nextLine();
-        System.out.println("Danh gia cua cong ty: ");
+        System.out.print('\t'+"Nhan xet: ");
         String b = new String();
         b = sc.nextLine();
-        System.out.println("Xep loai: ");
+        System.out.print('\t'+"Xep loai: ");
         String rating = new String();
         rating = sc.nextLine();
         this.companyName = a;

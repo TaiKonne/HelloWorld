@@ -46,15 +46,15 @@ public class Intern extends Employee{
     public void Input()
     {
         super.Input();
-        System.out.println("Ten chuyen nganh: ");
+        System.out.print("Ten chuyen nganh: ");
         String h = new String();
         h = sc.nextLine();
 
-        System.out.println("Ten truong: ");
+        System.out.print("Ten truong: ");
         String z = new String();
         z= sc.nextLine();
 
-        System.out.println("Hoc ki dang hoc: ");
+        System.out.print("Hoc ki dang hoc: ");
         int zz = sc.nextInt();
         this.major = h;
         this.schoolname = z;

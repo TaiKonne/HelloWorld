@@ -44,25 +44,21 @@ public class Fresher extends Employee {
     }
     @Override
     public String toString() {
-        return "{" +
-            " gradate='" + getGradate() + "'" +
-            ", grarank='" + getGrarank() + "'" +
-            ", schoolname='" + getSchoolname() + "'" +
-            "}";
+        return "Thoi gian tot nghiep: " + this.getGradate() + " | Xep loai: " + this.getGrarank() + " | Truong tot nghiep: " + this.getSchoolname();
     }
     public void Input()
     {
 
         super.Input();
-        System.out.println("Thoi gian tot nghiep: ");
+        System.out.print("Thoi gian tot nghiep: ");
         DateTime t = new DateTime();
         t.Input();
 
-        System.out.println("Loai tot nghiep: ");
+        System.out.print("Loai tot nghiep: ");
         String h = new String();
         h = sc.nextLine();
 
-        System.out.println("Ten truong: ");
+        System.out.print("Ten truong: ");
         String z = new String();
         z= sc.nextLine();
 

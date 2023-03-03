@@ -90,18 +90,18 @@ public abstract class Employee {
 
     public void Input()
     {
-        System.out.println("Ma Nhan Vien: ");
+        System.out.print("Ma Nhan Vien: ");
         String a= new String();
         a=sc.nextLine();
-        System.out.println("Ho & ten: ");
+        System.out.print("Ho & ten: ");
         String b= new String();
         b=sc.nextLine();
 
-        System.out.println("So dien thoai: ");
+        System.out.print("So dien thoai: ");
         String c= new String();
         c= sc.nextLine();
 
-        System.out.println("Email: ");
+        System.out.print("Email: ");
         String d= new String();
         d=sc.nextLine();
         
@@ -109,7 +109,7 @@ public abstract class Employee {
         DateTime dt = new DateTime();
         dt.Input();
 
-        System.out.println("So luong bang cap: ");
+        System.out.print("So luong bang cap: ");
         ArrayList<Certificate> cer = new ArrayList<Certificate>();
         int n = sc.nextInt();
         for(int i=0;i<n;i++)
@@ -120,7 +120,7 @@ public abstract class Employee {
         }
 
         
-        System.out.println("So luong cong ty da lam viec: ");
+        System.out.print("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();
         for(int i=0;i<n;i++)
@@ -129,7 +129,7 @@ public abstract class Employee {
             k.Input();
             com.add(k);
         }
-        System.out.println("Luong: ");
+        System.out.print("Luong: ");
         double luong  = sc.nextDouble();
 
         this.id = a;
@@ -144,17 +144,18 @@ public abstract class Employee {
     
     public void Output()
     {
-        System.out.println("Id: "+ this.getId() + '\n' + "Ho & Ten: " + this.getFullname() + '\n' + "sdt: " + this.getPhone() + '\n' + "Email: " + this.getEmail());
+        System.out.println("");
+        System.out.println("Id: "+ this.getId() + '\n' + "Ho & Ten: " + this.getFullname() + '\n' + "So dien thoai: " + this.getPhone() + '\n' + "Email: " + this.getEmail());
         System.out.println("Ngay sinh: " + this.getBirthday().getDay() + "/" + this.getBirthday().getMonth() + "/" + this.getBirthday().getYear());
-        System.out.println("| Bang cap: ");
+        System.out.println("Bang cap: ");
         for(int i=0;i<certificates.size();i++)
         {
-            System.out.println( '\t' + "" + certificates.get(i));
+            System.out.println('\t' + "" + this.certificates.get(i));
         }
-        System.out.println("| Lich su lam viec: ");
+        System.out.println("Lich su lam viec: ");
         for(int i=0;i< this.companies.size();i++)
         {
-            System.out.println( '\t' + "" + this.companies.get(i).toString());
+            System.out.println('\t' + "" + this.companies.get(i));
         }
         System.out.println("Luong: " + this.getSalary());
         

@@ -43,13 +43,13 @@ public class Certificate {
     }
     public void Input()
     {
-        System.out.println("Ma bang cap: ");
+        System.out.print('\t'+"Ma bang cap:  ");
         String a = new String();
         a = sc.nextLine();
-        System.out.println("Ten bang cap: ");
+        System.out.print('\t'+"Ten bang cap: ");
         String b = new String();
         b = sc.nextLine();
-        System.out.println("Xep loai: ");
+        System.out.print('\t'+"Xep loai: ");    
         String c= new String();
         c= sc.nextLine();
         this.cerID = a;

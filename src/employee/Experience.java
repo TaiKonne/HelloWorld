@@ -41,23 +41,21 @@ public class Experience extends Employee {
     public String toString() {
 
         return "" + 
-            " expyear='" + this.getExpyear() + "'" +
-            ", proSkill='" + this.getProSkill() + "'" +
-            "";
+            "Nam kinh nghiem: " + this.getExpyear()  + "| Ky nang chuyen nganh: " + this.getProSkill() ;
     }
     // String id, String fullname , String phone , String email, DateTime birthday , ArrayList<Certificate> certificates , int expyear , ArrayList<String> proskill
     public void Input()
     {
         super.Input();
-        System.out.println("So nam kinh nghiem: ");
+        System.out.print("So nam kinh nghiem: ");
         int y = sc.nextInt();
 
-        System.out.println("So ky nang chuyen nganh: ");
+        System.out.print("So ky nang chuyen nganh: ");
         int kn = sc.nextInt();
         sc.nextLine();
         ArrayList<String> skill = new ArrayList<String>();
         for(int i=0;i<kn;i++)
-        {   System.out.println("Ten ky nang: ");
+        {   System.out.print('\t'+"Ten ky nang: ");
             String l = new String();
             l = sc.nextLine();
             skill.add(l);
