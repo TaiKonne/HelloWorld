@@ -319,31 +319,27 @@ public class ManageFactory {
             }
         }
     }
-    
-    public void WorkHistory() 
-    {
+
+    public void WorkHistory() {
         System.out.println("Nhap Id can tim: ");
         String ids = new String();
         ids = sc.next();
         int k = -1;
-        for(int i=0;i<a.size();i++)
-        {
-            if(ids.equals(a.get(i).getId()))
-            {
-                k=i;
+        for (int i = 0; i < a.size(); i++) {
+            if (ids.equals(a.get(i).getId())) {
+                k = i;
                 break;
             }
-        }  
-        if(k == -1)
+        }
+        if (k == -1)
             System.out.println("Not found");
-        else 
-        {
-            for (int j = 0; j < a.get(k).getCompany().size(); j++) 
-            {
+        else {
+            for (int j = 0; j < a.get(k).getCompany().size(); j++) {
                 System.out.println(a.get(j).getCompany());
             }
         }
     }
+
     public void SortEmployee() { // sort lương nhân viên theo tùy chọn và theo từng loại nhân viên được chọn
 
         System.out.println("Kieu sort kinh nghiem cua nhan vien: ");
@@ -430,24 +426,23 @@ public class ManageFactory {
         }
     }
 
-
     public void FindEmployeesForProject() {
         System.out.println("Chon cac ky nang can thiet cho du an: ");
-        ArrayList <String> skills = new ArrayList <String> ();
+        ArrayList<String> skills = new ArrayList<String>();
         this.OptionsSkills(skills);
 
-        for(int i = 0; i < skills.size(); i++) {
-            skills.set(i,skills.get(i).toUpperCase());
+        for (int i = 0; i < skills.size(); i++) {
+            skills.set(i, skills.get(i).toUpperCase());
             System.out.println(skills.get(i));
         }
         int ok = 0;
-        for(Employee epl : this.a) {
-            if(epl instanceof Experience) {
-                Experience eplCur = (Experience)epl;
+        for (Employee epl : this.a) {
+            if (epl instanceof Experience) {
+                Experience eplCur = (Experience) epl;
                 ArrayList<String> proskill = eplCur.getProSkill();
-                for(String skill : proskill) {
+                for (String skill : proskill) {
                     String skillTarget = skill.toUpperCase();
-                    if(skills.contains(skillTarget) == true) {
+                    if (skills.contains(skillTarget) == true) {
                         System.out.println(eplCur.toString());
                         ok = 1;
                         break;
@@ -455,11 +450,12 @@ public class ManageFactory {
                 }
             }
         }
-        if(ok == 0) {
+        if (ok == 0) {
             System.out.println("Khong co nhan vien phu hop cho du an !!!");
         }
     }
-    public void OptionsSkills(ArrayList <String> skills) {
+
+    public void OptionsSkills(ArrayList<String> skills) {
         System.out.println("--------- SELECT SKILL ---------");
         System.out.println("1. Mobile");
         System.out.println("2. IOS");
@@ -467,18 +463,64 @@ public class ManageFactory {
         System.out.println("4. Backend");
         System.out.println("0. Xong");
         int op = sc.nextInt();
-        if(op==1) {
+        if (op == 1) {
             skills.add("Mobile");
             OptionsSkills(skills);
-        } else if(op==2) {
+        } else if (op == 2) {
             skills.add("IOS");
             OptionsSkills(skills);
-        } else if(op==3) {
+        } else if (op == 3) {
             skills.add("Frontend");
             OptionsSkills(skills);
-        } else if(op==4) {
+        } else if (op == 4) {
             skills.add("Backend");
             OptionsSkills(skills);
-        } else return;
+        } else
+            return;
+    }
+
+    public void tmp(int op) {
+        ArrayList<Intern> intern = new ArrayList<Intern>();
+        System.out.println("1. Them | 2. Bo qua");
+        for (Employee x : this.a) {
+            if (x instanceof Intern) {
+                x.Output();
+                int choose = sc.nextInt();
+                if (choose == 1) {
+                    intern.add((Intern) x);
+                }
+            }
+        }
+        if (op == 1) {
+            System.out.println("1. Mobile");
+        } else if (op == 2) {
+            System.out.println("2. IOS");
+        } else if (op == 3) {
+            System.out.println("3. Frontend");
+        } else if (op == 4) {
+            System.out.println("4. Backend");
+        }
+        for (Intern x : intern) {
+            x.Output();
+        }
+    }
+
+    public void Trainlearning() {
+        System.out.println("Hoc vien can hoc them nhung ky nang:");
+
+        System.out.println("--------- SELECT TRAING SKILL ---------");
+        System.out.println("1. Mobile");
+        System.out.println("2. IOS");
+        System.out.println("3. Frontend");
+        System.out.println("4. Backend");
+        int op = sc.nextInt();
+        if (op == 1) {
+            tmp(op);
+        } else if (op == 2) {
+            tmp(op);
+        } else if (op == 3) {
+            tmp(op);
+        }
+        return;
     }
 }
