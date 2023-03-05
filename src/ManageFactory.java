@@ -481,13 +481,13 @@ public class ManageFactory {
 
     public void tmp(int op) {
         ArrayList<Intern> intern = new ArrayList<Intern>();
-        System.out.println("1. Them | 2. Bo qua");
+        System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
         for (Employee x : this.a) {
-            if (x instanceof Intern) {
+            if (x instanceof Intern) { // kiểm tra và chọn nhân viên được train
                 x.Output();
                 int choose = sc.nextInt();
                 if (choose == 1) {
-                    intern.add((Intern) x);
+                    intern.add((Intern) x); // adđ thục tập sinh vào mảng
                 }
             }
         }
@@ -500,9 +500,10 @@ public class ManageFactory {
         } else if (op == 4) {
             System.out.println("4. Backend");
         }
-        for (Intern x : intern) {
+        for (Intern x : intern) { // các thực tập sinh được chọn để training và learning
             x.Output();
         }
+        intern.clear();
     }
 
     public void Trainlearning() {
@@ -520,7 +521,8 @@ public class ManageFactory {
             tmp(op);
         } else if (op == 3) {
             tmp(op);
+        } else if (op == 4) {
+            tmp(op);
         }
-        return;
     }
 }
