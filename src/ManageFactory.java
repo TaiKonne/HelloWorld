@@ -482,15 +482,23 @@ public class ManageFactory {
     public void tmp(int op) {
         ArrayList<Intern> intern = new ArrayList<Intern>();
         System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
-        for (Employee x : this.a) {
-            if (x instanceof Intern) { // kiểm tra và chọn nhân viên được train
-                x.Output();
-                int choose = sc.nextInt();
+
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) instanceof Intern) {
+                a.get(i).Output();
+                int choose = 0;
+                choose = sc.nextInt();
                 if (choose == 1) {
-                    intern.add((Intern) x); // adđ thục tập sinh vào mảng
+                    intern.add((Intern) a.get(i));
+                    Intern tmp = new Intern();
+                    tmp = (Intern) a.get(i);
+                    int fl = 1;
+                    tmp.setStatusIntern(fl);
+                    a.set(i, (Intern) tmp);
                 }
             }
         }
+
         if (op == 1) {
             System.out.println("1. Mobile");
         } else if (op == 2) {

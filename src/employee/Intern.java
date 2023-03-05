@@ -4,6 +4,8 @@ import Component.DateTime;
 public class Intern extends Employee{
     String major, schoolname;
     int semester;
+    int StatusIntern = 0; // trình trạng học tập thực tập
+
     Scanner sc = new Scanner(System.in);
     public Intern() {
     }
@@ -43,6 +45,14 @@ public class Intern extends Employee{
         this.semester = semester;
     }
 
+    public int getStatusIntern() {
+        return this.StatusIntern;
+    }
+
+    public void setStatusIntern(int StatusIntern) {
+        this.StatusIntern = StatusIntern;
+    }
+    
     public void Input()
     {
         super.Input();
