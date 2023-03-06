@@ -9,7 +9,7 @@ public class Test_class {
         ArrayList<Employee> a = new ArrayList<Employee>();
         ManageFactory b = new ManageFactory(a);
         System.out.println("Chon cac muc trong Menu: ");
-        System.out.println("0. Thoat" +'\n' +"1. Them Nhan Vien" +'\n' +"2. In "+'\n'+ "3. Sua Thong Tin" +'\n' +"4. Xoa Thong Tin" +'\n' +"5. Tim Kiem Nhan Vien" +'\n' + "6. Tang Luong Nhan Vien" + '\n' + "7. Xem lich su cac cong ty nhan vien da lam viec" + '\n' +"8. Sap xep danh sach nhan vien" +'\n'+ "9. Tim kiem cac nhan vien co ki nang phu hop voi du an");
+        System.out.println("0. Thoat" +'\n' +"1. Them Nhan Vien" +'\n' +"2. In "+'\n'+ "3. Sua Thong Tin" +'\n' +"4. Xoa Thong Tin" +'\n' +"5. Tim Kiem Nhan Vien" +'\n' + "6. Tang Luong Nhan Vien" + '\n' + "7. Xem lich su cac cong ty nhan vien da lam viec" + '\n' +"8. Sap xep danh sach nhan vien" +'\n'+ "9. Tim kiem cac nhan vien co ki nang phu hop voi du an" + '\n' + "10. Loc nhan vien theo ten bo phan");
         int n=0;
         while(true)
         {
@@ -49,6 +49,9 @@ public class Test_class {
             }
             else if(n==9) {
                 b.FindEmployeesForProject();
+            }
+            else if(n==10) {
+                b.FillterEmployeeByDepartment();
             }
             else if(n==0)
                 return;

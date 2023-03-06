@@ -3,7 +3,9 @@ import java.util.*;
 import Component.DateTime;
 
 public abstract class Employee {
-    protected String id,fullname,phone,email;
+    public static int generateId = 1;
+    protected int id;
+    protected String fullname,phone,email, departmentName;
     protected DateTime birthday;
     protected ArrayList<Certificate> certificates;
     protected ArrayList<Company> companies;
@@ -13,8 +15,8 @@ public abstract class Employee {
     public Employee() {
     }
 
-    public Employee(String id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary) {
-        this.id = id;
+    public Employee(int id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, String departmentName) {
+        this.id = Employee.generateId;
         this.fullname = fullname;
         this.phone = phone;
         this.email = email;
@@ -22,12 +24,15 @@ public abstract class Employee {
         this.certificates = certificates;
         this.companies = companies;
         this.salary = salary;
+        this.departmentName = departmentName;
+        Employee.generateId++;
     }
-    public String getId() {
+    
+    public int getId() {
         return this.id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -87,21 +92,25 @@ public abstract class Employee {
     {
         this.companies =  companies;
     }
+    public String getDepartment() {
+        return this.departmentName;
+    }
 
+    public void setDepartment(String departmentName) {
+        this.departmentName = departmentName;
+    }
     public void Input()
     {
-        System.out.print("Ma Nhan Vien: ");
-        String a= new String();
-        a=sc.nextLine();
-        System.out.print("Ho & ten: ");
+        System.out.println("Ma Nhan Vien: " + Employee.generateId);
+        System.out.println("Ho & ten: ");
         String b= new String();
         b=sc.nextLine();
 
-        System.out.print("So dien thoai: ");
+        System.out.println("So dien thoai: ");
         String c= new String();
         c= sc.nextLine();
 
-        System.out.print("Email: ");
+        System.out.println("Email: ");
         String d= new String();
         d=sc.nextLine();
         
@@ -109,7 +118,7 @@ public abstract class Employee {
         DateTime dt = new DateTime();
         dt.Input();
 
-        System.out.print("So luong bang cap: ");
+        System.out.println("So luong bang cap: ");
         ArrayList<Certificate> cer = new ArrayList<Certificate>();
         int n = sc.nextInt();
         for(int i=0;i<n;i++)
@@ -120,7 +129,7 @@ public abstract class Employee {
         }
 
         
-        System.out.print("So luong cong ty da lam viec: ");
+        System.out.println("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();
         for(int i=0;i<n;i++)
@@ -131,8 +140,8 @@ public abstract class Employee {
         }
         System.out.print("Luong: ");
         double luong  = sc.nextDouble();
-
-        this.id = a;
+    
+        this.id = Employee.generateId;
         this.fullname = b;
         this.phone = c;
         this.email = d;
@@ -158,6 +167,7 @@ public abstract class Employee {
             System.out.println('\t' + "" + this.companies.get(i));
         }
         System.out.println("Luong: " + this.getSalary());
+        System.out.println("Bo phan lam viec: " + this.getDepartment());
         
     }
 }
