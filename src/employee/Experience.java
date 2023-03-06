@@ -53,7 +53,7 @@ public class Experience extends Employee {
         sc.nextLine();
         ArrayList<String> skill = new ArrayList<String>();
         for(int i=0;i<kn;i++)
-        {   System.out.println('\t'+"Ten ky nang: ");
+        {   System.out.print('\t'+"Ten ky nang: ");
             String l = new String();
             l = sc.nextLine();
             skill.add(l);

@@ -15,7 +15,7 @@ public abstract class Employee {
     public Employee() {
     }
 
-    public Employee(int id, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, String departmentName) {
+    public Employee(int id2, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, String departmentName) {
         this.id = Employee.generateId;
         this.fullname = fullname;
         this.phone = phone;

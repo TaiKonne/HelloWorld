@@ -75,12 +75,12 @@ public class dataContext {
         Intern one = new Intern(Employee.generateId, "Hang" ,"012345789" , "hang@gmail.com", new DateTime(1,1,2003) , new ArrayList<> (
             Arrays.asList(
                 new Certificate("cer1", "thirdUniversity", "hard"),
-                new Certificate("cer2", "thirdSales", "hard")
+                new Certificate("cer2", "doubleTwitter", "hard")
             )
         ), new ArrayList<> (
             Arrays.asList(
-                new Company("CP Sales", "Happy", "5 Start"),
-                new Company("CP CEO", "Happy", "5 Start")
+                new Company("CP ACCOUNT", "Happy", "5 Start"),
+                new Company("CP Twitter", "Happy", "5 Start")
             )
         ), 123456789, "CNTT", "TDMU", 5,"DevDepartment");
         employees.add(one);
