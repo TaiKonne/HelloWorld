@@ -1,38 +1,53 @@
-
+﻿
 
 Tên đề tài: Quản Lí Nhân Viên của công ty lập trình ABC
+
 Mô tả đề tài: 
-Mỗi nhân viên (Employee) được công ty chia thành 3 loại sau: Nhân viên có kinh nghiệm lâu năm (Experience), nhân viên mới ra trường (Fresher) , Nhân viên thực tập (Intern).
+
+Mỗi nhân viên (Employee) được công ty chia thành 3 loại sau: Nhân viên có kinh nghiệm lâu năm (Experience), nhân viên mới ra trường (Fresher) , nhân viên thực tập (Intern).
 Tất các Employee đề có các thuộc tính chung: 
-    + ID: Mã nhân viên 
-    + FullName: Họ và tên đầy đủ của nhân viên
-    + BirthDay: Sinh nhật của nhân viên
-    + Phone : Số điện thoại liên lạc của nhân  viên
-    + Employee_type: Loại nhân viên ( 0 : Experience , 1: Fresher , 2: Intern )
-    + Company : thông tin về công ty mà nhân viên đã làm việc trước đây.
+       + ID: Mã nhân viên 
+       + FullName: Họ và tên đầy đủ của nhân viên
+       + BirthDay: Sinh nhật của nhân viên
+       + Phone : Số điện thoại liên lạc của nhân  viên
+	+ Certificate: Bằng cấp của nhân viên (ID bằng cấp, tên bằng cấp, hạng bằng cấp).
+	+ Salary: Tiền lương của nhân viên.
+       + Employee_type: Loại nhân viên ( 0 : Experience , 1: Fresher , 2: Intern)
+       + Company : thông tin về công ty mà nhân viên đã làm việc trước đây.
 Ngoài ra:
     + Experience : có thêm 2 thuộc tính: 
-        - Số năm kinh nghiệm (ExpYear)
-        - Kỹ năng chuyên môn ( ProSkill)        
+       - Số năm kinh nghiệm (ExpYear)
+       - Kỹ năng chuyên môn ( ProSkill)        
     +Fresher: có thêm 3 kỹ năng
-        - Năm tốt nghiệp
-        - Xếp loại tốt nghiệp
-        - Trường tốt nghiệp 
+       - Năm tốt nghiệp
+       - Xếp loại tốt nghiệp
+       - Trường tốt nghiệp 
     +Intern: có thêm 3 thuộc tính
-        - Chuyên ngành 
-        - Học kì đang học
-        - Trường tốt nghiệp
+       - Chuyên ngành 
+       - Học kì đang học
+       - Trường tốt nghiệp
+	- Trạng thái trong công ty(0. Chưa được train 1. Đang được train).
 Bên cạnh đó: Mỗi nhân viên khi được thêm vào công ty cần phải nộp bằng cấp (mỗi nhân viên có thể có nhiều bằng cấp ) gồm:
-    + Mã bằng cấp 
-    + Tên bằng cấp 
-    + Loại bằng cấp
-    + Ngày bằng được cấp
+     + Certificate:
+       - Mã bằng cấp.
+       - Tên bằng cấp.
+       - Loại bằng cấp.
+    + Company:
+- Tên công ty.
+- Đánh giá công ty.
+- Xếp hạng công ty.
+     + DateTime:
+- Ngày.
+- Tháng.
+- Năm.
 Yêu cầu dự kiến: 
-    1.Xây dựng chức năng tìm kiếm nhân viên (ID nhân viên) 
-    2.Xây dựng chức năng thêm nhân viên (1: Experience , 2: Fresher , 3: Intern , 0 : Dừng )
-    3.Xây dựng chức năng xóa nhân viên ( Nhập ID nhân viên)
-    4.Xây dựng chức năng sửa thông tin nhân viên ( nhập ID nhân viên -> hiện ra menu chọn thông tin cần sửa , nhập 0 để dừng lại )
-    5.Xây dựng chức năng tăng lương cho nhân viên  lau nam có số năm làm việc từ X năm lên k% lương hiện tại của nhân viên đó.
+    1.Xây dựng chức năng tìm kiếm nhân viên (ID nhân viên).
+    2.Xây dựng chức năng thêm nhân viên (1: Experience , 2: Fresher , 3: Intern , 0 : Dừng ).
+    3.Xây dựng chức năng xóa nhân viên ( Nhập ID nhân viên).
+    4.Xây dựng chức năng sửa thông tin nhân viên ( nhập ID nhân viên -> hiện ra menu chọn thông tin cần sửa , nhập 0 để dừng lại ).
+    5.Xây dựng chức năng tăng lương cho nhân viên  lâu năm có số năm làm việc từ X năm lên k% lương hiện tại của nhân viên đó.
     6.Xây dựng chức năng xem lịch sử các công ty mà nhân viên đó đã làm việc qua và xem đánh giá của công ty đó về nhân viên.
     7.Xây dựng chức năng sắp xếp theo đối tượng được chọn (1: Experience , 2: Fresher , 3: Intern , 0 : Dừng)
-    8. Xây dựng chức năng tìm các nhân viên có kỹ năng phù hợp để làm dự án
+    8. Xây dựng chức năng tìm các nhân viên có kỹ năng phù hợp để làm dự án.
+    9. Tìm kiếm các nhân viên có kỹ năng phù hợp với dự án.
+   10. Lựa chọn các thực tập sinh cần học thêm kiến thức.
