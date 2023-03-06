@@ -3,7 +3,7 @@ import java.util.*;
 import Component.DateTime;
 public class Intern extends Employee{
     String major, schoolname;
-    int semester;
+    int semester; // học kỳ
     int StatusIntern = 0; // trình trạng học tập thực tập
 
     Scanner sc = new Scanner(System.in);
