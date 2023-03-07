@@ -18,11 +18,10 @@ public class Fresher extends Employee {
         this.schoolname = schoolname;
     }
 
-
     public Fresher(int id, String fullname, String phone, String email, DateTime birthday,
             ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, DateTime gradate,
             String grarank, String schoolname, String departmentName) {
-        super(id, fullname, phone, email, birthday, certificates, companies, salary,departmentName);
+        super(id, fullname, phone, email, birthday, certificates, companies, salary, departmentName);
         this.gradate = gradate;
         this.grarank = grarank;
         this.schoolname = schoolname;
@@ -51,8 +50,6 @@ public class Fresher extends Employee {
     public void setSchoolname(String schoolname) {
         this.schoolname = schoolname;
     }
-
-
 
     @Override
     public String toString() {

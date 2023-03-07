@@ -82,7 +82,7 @@ public class dataContext {
                 new Company("CP ACCOUNT", "Happy", "5 Start"),
                 new Company("CP Twitter", "Happy", "5 Start")
             )
-        ), 123456789, "CNTT", "TDMU", 5,"DevDepartment");
+        ), 123456789, "CNTT", "TDMU", 5,"DevDepartment", 0);
         employees.add(one);
         return employees;
     }

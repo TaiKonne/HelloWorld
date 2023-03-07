@@ -1,11 +1,12 @@
 package employee;
+
 import java.util.*;
 import Component.DateTime;
 
 public abstract class Employee {
     public static int generateId = 1;
     protected int id;
-    protected String fullname,phone,email, departmentName;
+    protected String fullname, phone, email, departmentName;
     protected DateTime birthday;
     protected ArrayList<Certificate> certificates;
     protected ArrayList<Company> companies;
@@ -15,7 +16,8 @@ public abstract class Employee {
     public Employee() {
     }
 
-    public Employee(int id2, String fullname, String phone, String email, DateTime birthday, ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, String departmentName) {
+    public Employee(int id2, String fullname, String phone, String email, DateTime birthday,
+            ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, String departmentName) {
         this.id = Employee.generateId;
         this.fullname = fullname;
         this.phone = phone;
@@ -27,7 +29,7 @@ public abstract class Employee {
         this.departmentName = departmentName;
         Employee.generateId++;
     }
-    
+
     public int getId() {
         return this.id;
     }
@@ -75,23 +77,23 @@ public abstract class Employee {
     public void setCertificates(ArrayList<Certificate> certificates) {
         this.certificates = certificates;
     }
-    public double getSalary()
-    {
+
+    public double getSalary() {
         return this.salary;
     }
-    public  void setSalary(double salarys)
-    {
+
+    public void setSalary(double salarys) {
         this.salary = salarys;
     }
 
-    public ArrayList<Company> getCompany()
-    {
+    public ArrayList<Company> getCompany() {
         return this.companies;
     }
-    public void setCompany(ArrayList<Company> companies)
-    {
-        this.companies =  companies;
+
+    public void setCompany(ArrayList<Company> companies) {
+        this.companies = companies;
     }
+
     public String getDepartment() {
         return this.departmentName;
     }
@@ -99,21 +101,21 @@ public abstract class Employee {
     public void setDepartment(String departmentName) {
         this.departmentName = departmentName;
     }
-    public void Input()
-    {
+
+    public void Input() {
         System.out.println("Ma Nhan Vien: " + Employee.generateId);
         System.out.println("Ho & ten: ");
-        String b= new String();
-        b=sc.nextLine();
+        String b = new String();
+        b = sc.nextLine();
 
         System.out.println("So dien thoai: ");
-        String c= new String();
-        c= sc.nextLine();
+        String c = new String();
+        c = sc.nextLine();
 
         System.out.println("Email: ");
-        String d= new String();
-        d=sc.nextLine();
-        
+        String d = new String();
+        d = sc.nextLine();
+
         System.out.println("Ngay Thang Nam sinh: ");
         DateTime dt = new DateTime();
         dt.Input();
@@ -121,26 +123,23 @@ public abstract class Employee {
         System.out.println("So luong bang cap: ");
         ArrayList<Certificate> cer = new ArrayList<Certificate>();
         int n = sc.nextInt();
-        for(int i=0;i<n;i++)
-        {
+        for (int i = 0; i < n; i++) {
             Certificate k = new Certificate();
             k.Input();
             cer.add(k);
         }
 
-        
         System.out.println("So luong cong ty da lam viec: ");
         ArrayList<Company> com = new ArrayList<Company>();
         n = sc.nextInt();
-        for(int i=0;i<n;i++)
-        {
+        for (int i = 0; i < n; i++) {
             Company k = new Company();
             k.Input();
             com.add(k);
         }
         System.out.print("Luong: ");
-        double luong  = sc.nextDouble();
-    
+        double luong = sc.nextDouble();
+
         this.id = Employee.generateId;
         this.fullname = b;
         this.phone = c;
@@ -150,24 +149,23 @@ public abstract class Employee {
         this.companies = com;
         this.salary = luong;
     }
-    
-    public void Output()
-    {
+
+    public void Output() {
         System.out.println("");
-        System.out.println("Id: "+ this.getId() + '\n' + "Ho & Ten: " + this.getFullname() + '\n' + "So dien thoai: " + this.getPhone() + '\n' + "Email: " + this.getEmail());
-        System.out.println("Ngay sinh: " + this.getBirthday().getDay() + "/" + this.getBirthday().getMonth() + "/" + this.getBirthday().getYear());
+        System.out.println("Id: " + this.getId() + '\n' + "Ho & Ten: " + this.getFullname() + '\n' + "So dien thoai: "
+                + this.getPhone() + '\n' + "Email: " + this.getEmail());
+        System.out.println("Ngay sinh: " + this.getBirthday().getDay() + "/" + this.getBirthday().getMonth() + "/"
+                + this.getBirthday().getYear());
         System.out.println("Bang cap: ");
-        for(int i=0;i<certificates.size();i++)
-        {
+        for (int i = 0; i < certificates.size(); i++) {
             System.out.println('\t' + "" + this.certificates.get(i));
         }
         System.out.println("Lich su lam viec: ");
-        for(int i=0;i< this.companies.size();i++)
-        {
+        for (int i = 0; i < this.companies.size(); i++) {
             System.out.println('\t' + "" + this.companies.get(i));
         }
         System.out.println("Luong: " + this.getSalary());
         System.out.println("Bo phan lam viec: " + this.getDepartment());
-        
+
     }
 }
