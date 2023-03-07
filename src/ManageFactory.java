@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.*;
 import employee.*;
 import Component.*;
+import data.dataContext;
 
 public class ManageFactory {
     private ArrayList<Employee> a = new ArrayList<Employee>();
@@ -16,28 +17,36 @@ public class ManageFactory {
     }
 
     public void Input() {
+        dataContext data = new dataContext();
         int type;
         do {
-            System.out.println("Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+            System.out.println("Lua chon loai nhan vien " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             type = sc.nextInt();
             if (type != 1 && type != 2 && type != 3) {
                 System.out.println("Nhap lai! ");
                 System.out.println("Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             }
             if (type == 1) {
-                Experience k = new Experience();
-                k.Input();
-                a.add(k);
+                // Experience k = new Experience();
+                // k.Input();
+                for (Experience exp : data.addEmployExperience()) {
+                    a.add(exp);
+                }
                 return;
+
             } else if (type == 2) {
-                Fresher k = new Fresher();
-                k.Input();
-                a.add(k);
+                // Fresher k = new Fresher();
+                // k.Input();
+                for (Fresher fresh : data.addEmployFresher()) {
+                    a.add(fresh);
+                }
                 return;
             } else if (type == 3) {
-                Intern k = new Intern();
-                k.Input();
-                a.add(k);
+                // Intern k = new Intern();
+                // k.Input();
+                for (Intern inter : data.addEmployIntern()) {
+                    a.add(inter);
+                }
                 return;
             }
         } while (type != 1 && type != 2 && type != 3);
@@ -443,7 +452,7 @@ public class ManageFactory {
                 for (String skill : proskill) {
                     String skillTarget = skill.toUpperCase();
                     if (skills.contains(skillTarget) == true) {
-                        System.out.println(eplCur.toString());
+                        eplCur.Output();
                         ok = 1;
                         break;
                     }
@@ -497,39 +506,17 @@ public class ManageFactory {
                 }
             }
         }
-
-        if (op == 1) {
-            System.out.println("1. Mobile");
-        } else if (op == 2) {
-            System.out.println("2. IOS");
-        } else if (op == 3) {
-            System.out.println("3. Frontend");
-        } else if (op == 4) {
-            System.out.println("4. Backend");
-        }
-        for (Intern x : intern) { // các thực tập sinh được chọn để training và learning
-            x.Output();
-        }
-        intern.clear();
     }
 
-    public void Trainlearning() {
-        System.out.println("Hoc vien can hoc them nhung ky nang:");
+    public void FillterEmployeeByDepartment() {
+        System.out.println("Nhap ten bo phan can loc : ");
+        String departmentName = sc.nextLine();
+        String target = departmentName.toUpperCase();
+        for (Employee epl : a) {
 
-        System.out.println("--------- SELECT TRAING SKILL ---------");
-        System.out.println("1. Mobile");
-        System.out.println("2. IOS");
-        System.out.println("3. Frontend");
-        System.out.println("4. Backend");
-        int op = sc.nextInt();
-        if (op == 1) {
-            tmp(op);
-        } else if (op == 2) {
-            tmp(op);
-        } else if (op == 3) {
-            tmp(op);
-        } else if (op == 4) {
-            tmp(op);
+            if (epl.getDepartment().toUpperCase().equals(target)) {
+                epl.Output();
+            }
         }
     }
 }

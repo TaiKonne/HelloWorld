@@ -35,4 +35,6 @@ Yêu cầu dự kiến:
     5.Xây dựng chức năng tăng lương cho nhân viên  lau nam có số năm làm việc từ X năm lên k% lương hiện tại của nhân viên đó.
     6.Xây dựng chức năng xem lịch sử các công ty mà nhân viên đó đã làm việc qua và xem đánh giá của công ty đó về nhân viên.
     7.Xây dựng chức năng sắp xếp theo đối tượng được chọn (1: Experience , 2: Fresher , 3: Intern , 0 : Dừng)
-    8. Xây dựng chức năng tìm các nhân viên có kỹ năng phù hợp để làm dự án
+    8.Xây dựng chức năng tìm các nhân viên có kỹ năng phù hợp để làm dự án
+    9.Xây dựng chức năng lọc các nhân viên theo bộ phận
+    ( thương tết, số giờ làm, )

@@ -18,10 +18,11 @@ public class Fresher extends Employee {
         this.schoolname = schoolname;
     }
 
-    public Fresher(String id, String fullname, String phone, String email, DateTime birthday,
+
+    public Fresher(int id, String fullname, String phone, String email, DateTime birthday,
             ArrayList<Certificate> certificates, ArrayList<Company> companies, double salary, DateTime gradate,
-            String grarank, String schoolname) {
-        super(id, fullname, phone, email, birthday, certificates, companies, salary);
+            String grarank, String schoolname, String departmentName) {
+        super(id, fullname, phone, email, birthday, certificates, companies, salary,departmentName);
         this.gradate = gradate;
         this.grarank = grarank;
         this.schoolname = schoolname;
