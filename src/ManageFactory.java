@@ -20,11 +20,11 @@ public class ManageFactory {
         dataContext data = new dataContext();
         int type;
         do {
-            System.out.println("Lua chon loai nhan vien " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+            System.out.println('\t'+ "Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             type = sc.nextInt();
             if (type != 1 && type != 2 && type != 3) {
                 System.out.println("Nhap lai! ");
-                System.out.println("Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+                System.out.println('\t'+"Nhap lai lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             }
             if (type == 1) {
                 // Experience k = new Experience();
