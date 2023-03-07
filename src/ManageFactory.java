@@ -482,7 +482,6 @@ public class ManageFactory {
     public void tmp(int op) {
         ArrayList<Intern> intern = new ArrayList<Intern>();
         System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
-
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i) instanceof Intern) {
                 a.get(i).Output();
