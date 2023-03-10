@@ -61,9 +61,7 @@ public class ManageFactory {
 
     public void FindEmployee() // Tim thay la xuat thong tin ra
     {
-        System.out.println("Nhap Id can tim: ");
-        // String ids = new String();
-        // ids = sc.next();
+        System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
         for (int i = 0; i < a.size(); i++) {
@@ -79,12 +77,11 @@ public class ManageFactory {
     }
 
     public void RemoveEmployee() {
-        System.out.println("Nhap Id can tim: ");
-        String ids = new String();
-        ids = sc.next();
+        System.out.print("Nhap Id can tim: ");
+        int ids = sc.nextInt();
         int k = -1;
         for (int i = 0; i < a.size(); i++) {
-            if (ids.equals(a.get(i).getId())) {
+            if (ids == a.get(i).getId()) {
                 k = i;
                 break;
             }
@@ -96,12 +93,11 @@ public class ManageFactory {
     }
 
     public void EditInfor() {
-        System.out.println("Nhap Id can tim: ");
-        String ids = new String();
-        ids = sc.next();
+        System.out.print("Nhap Id can tim: ");
+        int ids = sc.nextInt();
         int k = -1;
         for (int i = 0; i < a.size(); i++) {
-            if (ids.equals(a.get(i).getId())) {
+            if (ids == a.get(i).getId()) {
                 k = i;
                 break;
             }
@@ -331,12 +327,11 @@ public class ManageFactory {
     }
 
     public void WorkHistory() {
-        System.out.println("Nhap Id can tim: ");
-        String ids = new String();
-        ids = sc.next();
+        System.out.print("Nhap Id can tim: ");
+        int ids = sc.nextInt();
         int k = -1;
         for (int i = 0; i < a.size(); i++) {
-            if (ids.equals(a.get(i).getId())) {
+            if (ids == a.get(i).getId()) {
                 k = i;
                 break;
             }
