@@ -25,7 +25,7 @@ public class dataContext {
                 new Company("company Print", "good", "5 start"),
                 new Company("company software", "bad", "2 start")
             )
-        ),123456789,0, new ArrayList<>(
+        ),(long)123456789,0, new ArrayList<>(
             Arrays.asList(
                 "Mobile",
                 "Frontend"
@@ -42,7 +42,7 @@ public class dataContext {
                 new Company("company outSoure", "good", "5 start"),
                 new Company("company software", "bad", "2 start")
             )
-        ),123456789,0, new ArrayList<>(
+        ),(long)123456789,0, new ArrayList<>(
             Arrays.asList(
                 "Backend",
                 "Frontend"
@@ -65,7 +65,7 @@ public class dataContext {
                 new Company("CP ACCOUNT", "Happy", "5 Start"),
                 new Company("CP Twitter", "Happy", "5 Start")
             )
-        ), 123456789, new DateTime(22,12,2024), "master", "TDMU","DevDepartment");
+        ), (long)123456789, new DateTime(22,12,2024), "master", "TDMU","DevDepartment");
         employees.add(one);
         return employees;
     }
@@ -82,7 +82,7 @@ public class dataContext {
                 new Company("CP ACCOUNT", "Happy", "5 Start"),
                 new Company("CP Twitter", "Happy", "5 Start")
             )
-        ), 123456789, "CNTT", "TDMU", 5,"DevDepartment", 0);
+        ), (long)123456789, "CNTT", "TDMU", 5,"DevDepartment", 0);
         employees.add(one);
         return employees;
     }

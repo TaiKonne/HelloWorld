@@ -62,11 +62,12 @@ public class ManageFactory {
     public void FindEmployee() // Tim thay la xuat thong tin ra
     {
         System.out.println("Nhap Id can tim: ");
-        String ids = new String();
-        ids = sc.next();
+        // String ids = new String();
+        // ids = sc.next();
+        int ids = sc.nextInt();
         int k = -1;
         for (int i = 0; i < a.size(); i++) {
-            if (ids.equals(a.get(i).getId())) {
+            if (ids == a.get(i).getId()) {
                 k = i;
                 break;
             }
