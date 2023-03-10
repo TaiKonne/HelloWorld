@@ -20,11 +20,11 @@ public class ManageFactory {
         dataContext data = new dataContext();
         int type;
         do {
-            System.out.println('\t'+ "Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+            System.out.println('\t' + "Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             type = sc.nextInt();
             if (type != 1 && type != 2 && type != 3) {
                 System.out.println("Nhap lai! ");
-                System.out.println('\t'+"Nhap lai lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+                System.out.println('\t' + "Nhap lai lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
             }
             if (type == 1) {
                 // Experience k = new Experience();
@@ -506,6 +506,26 @@ public class ManageFactory {
                     a.set(i, (Intern) tmp);
                 }
             }
+        }
+    }
+
+    public void Trainlearning() {
+        System.out.println("Hoc vien can hoc them nhung ky nang:");
+
+        System.out.println("--------- SELECT TRAING SKILL ---------");
+        System.out.println("1. Mobile");
+        System.out.println("2. IOS");
+        System.out.println("3. Frontend");
+        System.out.println("4. Backend");
+        int op = sc.nextInt();
+        if (op == 1) {
+            tmp(op);
+        } else if (op == 2) {
+            tmp(op);
+        } else if (op == 3) {
+            tmp(op);
+        } else if (op == 4) {
+            tmp(op);
         }
     }
 
