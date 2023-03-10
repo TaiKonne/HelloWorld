@@ -1,0 +1,13 @@
+2023-03-10 23:00:19.723385800 Them san pham 
+2023-03-10 23:00:25.457001600 Them san pham 
+2023-03-10 23:00:26.634505700 Them san pham 
+2023-03-10 23:00:28.184092500 In tat ca nhan vien
+2023-03-10 23:00:46.667708700 Chinh sua thong tin nhan vien
+2023-03-10 23:00:53.021289500 Xoa nhan vien
+2023-03-10 23:00:57.110488100 Tim kiem nhan vien
+2023-03-10 23:01:05.070706700 Cap nhat luong nhan vien
+2023-03-10 23:01:09.707893900 Xem lich su lam viec cua nhan vien
+2023-03-10 23:01:14.718624200 Sap xep danh sach nhan vien
+2023-03-10 23:01:31.015783200 Tim nhan vien phu hop cho du an
+2023-03-10 23:01:39.763706300 Loc nhan vien theo bo phan
+2023-03-10 23:01:50.694582500 Training them cho nhan vien thuc tap

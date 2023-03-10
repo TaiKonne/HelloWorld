@@ -7,7 +7,7 @@ public class Test_class {
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> a = new ArrayList<Employee>();
         ManageFactory b = new ManageFactory(a);
-        System.out.println("Chon cac muc trong Menu: ");
+        System.out.println("******* LUA CHON MENU THAO TAC ---------");
         System.out.println("0. Thoat" + '\n' + "1. Them Nhan Vien" + '\n' + "2. In " + '\n' + "3. Sua Thong Tin" + '\n'
                 + "4. Xoa Thong Tin" + '\n' + "5. Tim Kiem Nhan Vien" + '\n' + "6. Tang Luong Nhan Vien" + '\n'
                 + "7. Xem lich su cac cong ty nhan vien da lam viec" + '\n' + "8. Sap xep danh sach nhan vien" + '\n'
@@ -77,6 +77,7 @@ public class Test_class {
                     e.printStackTrace();
                 }
             } else if (n == 0) {
+                System.out.println("--------- THOAT CHUONG TRINH ---------");
                 LOG x = LOG.getInstance();
                 x.writeLOG(n);
                 return;

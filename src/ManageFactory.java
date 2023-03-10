@@ -17,14 +17,17 @@ public class ManageFactory {
     }
 
     public void Input() {
+        System.out.println("--------- THEM NHAN VIEN ---------");
         dataContext data = new dataContext();
         int type;
         do {
             System.out.println('\t' + "Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+            System.out.print("--> ");
             type = sc.nextInt();
             if (type != 1 && type != 2 && type != 3) {
                 System.out.println("Nhap lai! ");
                 System.out.println('\t' + "Nhap lai lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
+                System.out.print("--> ");
             }
             if (type == 1) {
                 // Experience k = new Experience();
@@ -53,7 +56,7 @@ public class ManageFactory {
     }
 
     public void Output() {
-        System.out.println("Danh sach nhan vien:");
+        System.out.println("--------- DANH SACH NHAN VIEN ---------");
         for (int i = 0; i < a.size(); i++) {
             a.get(i).Output();
         }
@@ -61,6 +64,7 @@ public class ManageFactory {
 
     public void FindEmployee() // Tim thay la xuat thong tin ra
     {
+        System.out.println("--------- TIM KIEM THONG TIN NHAN VIEN ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -77,6 +81,7 @@ public class ManageFactory {
     }
 
     public void RemoveEmployee() {
+        System.out.println("--------- XOA NHAN VIEN ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -93,6 +98,7 @@ public class ManageFactory {
     }
 
     public void EditInfor() {
+        System.out.println("--------- CHINH SUA THONG TIN NHAN VIEN ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -111,36 +117,36 @@ public class ManageFactory {
                 System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n'
                         + "7. So Nam kinh nghiem" + '\n' + "8. Ky nang chuyen nganh");
-
+                System.out.print("--> ");
                 int choose = sc.nextInt();
                 sc.nextLine();
                 if (choose == 1) {
-                    System.out.println("Ho va ten moi:");
+                    System.out.print("Ho va ten moi: ");
                     String newfullname = new String();
                     newfullname = sc.nextLine();
                     a.get(k).setFullname(newfullname);
                 } else if (choose == 2) {
-                    System.out.println("Email moi: ");
+                    System.out.print("Email moi: ");
                     String newEmail = new String();
                     newEmail = sc.nextLine();
                     a.get(k).setEmail(newEmail);
                 } else if (choose == 3) {
-                    System.out.println("So dien thoai moi: ");
+                    System.out.print("So dien thoai moi: ");
                     String newPhone = new String();
                     newPhone = sc.nextLine();
                     a.get(k).setPhone(newPhone);
                 } else if (choose == 4) {
                     System.out.println("Ngay Thang nam sinh moi:");
-                    System.out.println('\t' + "Ngay:");
+                    System.out.print('\t' + "Ngay: ");
                     int dd = sc.nextInt();
-                    System.out.println('\t' + "Thang:");
+                    System.out.print('\t' + "Thang: ");
                     int mm = sc.nextInt();
-                    System.out.println('\t' + "Nam:");
+                    System.out.print('\t' + "Nam: ");
                     int yy = sc.nextInt();
                     DateTime newNgaysinh = new DateTime(dd, mm, yy);
                     a.get(k).setBirthday(newNgaysinh);
                 } else if (choose == 5) {
-                    System.out.println("So luong bang cap moi:");
+                    System.out.print("So luong bang cap moi: ");
                     int sl = sc.nextInt();
                     sc.nextLine();
                     ArrayList<Certificate> newbangcap = new ArrayList<Certificate>();
@@ -151,15 +157,15 @@ public class ManageFactory {
                     }
                     a.get(k).setCertificates(newbangcap);
                 } else if (choose == 6) {
-                    System.out.println("Muc luong moi:");
+                    System.out.print("Muc luong moi: ");
                     double newLuong = sc.nextDouble();
                     a.get(k).setSalary(newLuong);
                 } else if (choose == 7) {
-                    System.out.println("So nam kinh nghiem:");
+                    System.out.print("So nam kinh nghiem: ");
                     int newExpyear = sc.nextInt();
                     tmp.setExpyear(newExpyear);
                 } else if (choose == 8) {
-                    System.out.println("So ky nang chuyen nganh: ");
+                    System.out.print("So ky nang chuyen nganh: ");
                     int sl = sc.nextInt();
                     sc.nextLine();
                     ArrayList<String> newproSkill = new ArrayList<String>();
@@ -177,35 +183,36 @@ public class ManageFactory {
                 System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n'
                         + "7. Thoi gian tot nghiep" + '\n' + "8. Loai tot nghiep" + '\n' + "9. Truong tot nghiep");
+                System.out.print("--> ");
                 int choose = sc.nextInt();
                 sc.nextLine();
                 if (choose == 1) {
-                    System.out.println("Ho va ten moi:");
+                    System.out.print("Ho va ten moi: ");
                     String newfullname = new String();
                     newfullname = sc.nextLine();
                     a.get(k).setFullname(newfullname);
                 } else if (choose == 2) {
-                    System.out.println("Email moi: ");
+                    System.out.print("Email moi: ");
                     String newEmail = new String();
                     newEmail = sc.nextLine();
                     a.get(k).setEmail(newEmail);
                 } else if (choose == 3) {
-                    System.out.println("So dien thoai moi: ");
+                    System.out.print("So dien thoai moi: ");
                     String newPhone = new String();
                     newPhone = sc.nextLine();
                     a.get(k).setPhone(newPhone);
                 } else if (choose == 4) {
                     System.out.println("Ngay Thang nam sinh moi:");
-                    System.out.println('\t' + "Ngay:");
+                    System.out.print('\t' + "Ngay: ");
                     int dd = sc.nextInt();
-                    System.out.println('\t' + "Thang:");
+                    System.out.print('\t' + "Thang: ");
                     int mm = sc.nextInt();
-                    System.out.println('\t' + "Nam:");
+                    System.out.print('\t' + "Nam: ");
                     int yy = sc.nextInt();
                     DateTime newNgaysinh = new DateTime(dd, mm, yy);
                     a.get(k).setBirthday(newNgaysinh);
                 } else if (choose == 5) {
-                    System.out.println("So luong bang cap moi:");
+                    System.out.print("So luong bang cap moi: ");
                     int sl = sc.nextInt();
                     sc.nextLine();
                     ArrayList<Certificate> newbangcap = new ArrayList<Certificate>();
@@ -216,26 +223,26 @@ public class ManageFactory {
                     }
                     a.get(k).setCertificates(newbangcap);
                 } else if (choose == 6) {
-                    System.out.println("Muc luong moi:");
+                    System.out.print("Muc luong moi: ");
                     double newLuong = sc.nextDouble();
                     a.get(k).setSalary(newLuong);
                 } else if (choose == 7) {
-                    System.out.println("Thoi gian tot nghiep moi:");
-                    System.out.println('\t' + "Ngay tot nghiep:");
+                    System.out.print("Thoi gian tot nghiep moi: ");
+                    System.out.print('\t' + "Ngay tot nghiep: ");
                     int dd = sc.nextInt();
-                    System.out.println('\t' + "Thang tot nghiep:");
+                    System.out.print('\t' + "Thang tot nghiep: ");
                     int mm = sc.nextInt();
-                    System.out.println('\t' + "Nam tot nghiep:");
+                    System.out.print('\t' + "Nam tot nghiep: ");
                     int yy = sc.nextInt();
                     DateTime newgraDate = new DateTime(dd, mm, yy);
                     tmp.setGradate(newgraDate);
                 } else if (choose == 8) {
-                    System.out.println("Loai tot nghiep moi:");
+                    System.out.print("Loai tot nghiep moi: ");
                     String newgraRank = new String();
                     newgraRank = sc.nextLine();
                     tmp.setGrarank(newgraRank);
                 } else if (choose == 9) {
-                    System.out.println("Ten truong:");
+                    System.out.print("Ten truong: ");
                     String newschoolname = new String();
                     newschoolname = sc.nextLine();
                     tmp.setSchoolname(newschoolname);
@@ -247,35 +254,36 @@ public class ManageFactory {
                 System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n' + "7. Chuyen nganh"
                         + '\n' + "8. Truong tot nghiep" + '\n' + "9. Hoc ky dang hoc");
+                System.out.print("--> ");
                 int choose = sc.nextInt();
                 sc.nextLine();
                 if (choose == 1) {
-                    System.out.println("Ho va ten moi:");
+                    System.out.print("Ho va ten moi: ");
                     String newfullname = new String();
                     newfullname = sc.nextLine();
                     a.get(k).setFullname(newfullname);
                 } else if (choose == 2) {
-                    System.out.println("Email moi: ");
+                    System.out.print("Email moi: ");
                     String newEmail = new String();
                     newEmail = sc.nextLine();
                     a.get(k).setEmail(newEmail);
                 } else if (choose == 3) {
-                    System.out.println("So dien thoai moi: ");
+                    System.out.print("So dien thoai moi: ");
                     String newPhone = new String();
                     newPhone = sc.nextLine();
                     a.get(k).setPhone(newPhone);
                 } else if (choose == 4) {
                     System.out.println("Ngay Thang nam sinh moi:");
-                    System.out.println('\t' + "Ngay:");
+                    System.out.print('\t' + "Ngay: ");
                     int dd = sc.nextInt();
-                    System.out.println('\t' + "Thang:");
+                    System.out.print('\t' + "Thang: ");
                     int mm = sc.nextInt();
-                    System.out.println('\t' + "Nam:");
+                    System.out.print('\t' + "Nam: ");
                     int yy = sc.nextInt();
                     DateTime newNgaysinh = new DateTime(dd, mm, yy);
                     a.get(k).setBirthday(newNgaysinh);
                 } else if (choose == 5) {
-                    System.out.println("So luong bang cap moi:");
+                    System.out.print("So luong bang cap moi: ");
                     int sl = sc.nextInt();
                     sc.nextLine();
                     ArrayList<Certificate> newbangcap = new ArrayList<Certificate>();
@@ -286,21 +294,21 @@ public class ManageFactory {
                     }
                     a.get(k).setCertificates(newbangcap);
                 } else if (choose == 6) {
-                    System.out.println("Muc luong moi:");
+                    System.out.print("Muc luong moi: ");
                     double newLuong = sc.nextDouble();
                     a.get(k).setSalary(newLuong);
                 } else if (choose == 7) {
-                    System.out.println("Chuyen nganh dang hoc:");
+                    System.out.print("Chuyen nganh dang hoc: ");
                     String newmajors = new String();
                     newmajors = sc.nextLine();
                     tmp.setMajor(newmajors);
                 } else if (choose == 8) {
-                    System.out.println("Ten truong:");
+                    System.out.print("Ten truong: ");
                     String newschoolname = new String();
                     newschoolname = sc.nextLine();
                     tmp.setSchoolname(newschoolname);
                 } else if (choose == 9) {
-                    System.out.println("Hoc ky dang hoc:");
+                    System.out.print("Hoc ky dang hoc: ");
                     int newSemester = sc.nextInt();
                     tmp.setSemester(newSemester);
                 } else
@@ -310,9 +318,10 @@ public class ManageFactory {
     }
 
     public void UpdateSalary() {
-        System.out.println("Nam can xet: ");
+        System.out.println("--------- CAP NHAT LUONG NHAN VIEN ---------");
+        System.out.print("Nam can xet: ");
         int yy = sc.nextInt();
-        System.out.println("Phan tram luong muon tang:");
+        System.out.print("Phan tram luong muon tang: ");
         int percent = sc.nextInt();
         sc.nextLine();
         for (int i = 0; i < a.size(); i++) {
@@ -327,6 +336,7 @@ public class ManageFactory {
     }
 
     public void WorkHistory() {
+        System.out.println("--------- XEM LICH SU LAM VIEC ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -346,13 +356,14 @@ public class ManageFactory {
     }
 
     public void SortEmployee() { // sort lương nhân viên theo tùy chọn và theo từng loại nhân viên được chọn
-
-        System.out.println("Kieu sort kinh nghiem cua nhan vien: ");
-        System.out.println("1. Tang dan | 2. Giam dan ");
+        System.out.println("--------- SAP XEP DANH SACH NHAN VIEN ---------");
+        System.out.println("Hinh thuc sap xep");
+        System.out.println('\t' + "1. Tang dan" + '\n' + '\t' + "2. Giam dan");
+        System.out.print("--> ");
         int typeSort = sc.nextInt();
-        System.out.println("Chon kinh nghiem cua nhan vien de sort: ");
-        System.out.println("1. experience | 2. fresher | 3.intern");
-
+        System.out.println("Loai nhan vien");
+        System.out.println('\t' + "1. experience" + '\n' + '\t' + "2. fresher" + '\n' + '\t' + "3.intern");
+        System.out.print("--> ");
         int ex_emloyee = sc.nextInt();
         // ArrayList<Employee> tmp = new ArrayList<Employee>();
         // ArrayList<Employee> a = new ArrayList<Employee>() Experience Intern Fresher
@@ -432,7 +443,7 @@ public class ManageFactory {
     }
 
     public void FindEmployeesForProject() {
-        System.out.println("Chon cac ky nang can thiet cho du an: ");
+        System.out.println("--------- CHON KY NANG CAN THIET CHO DU AN ---------");
         ArrayList<String> skills = new ArrayList<String>();
         this.OptionsSkills(skills);
 
@@ -461,12 +472,13 @@ public class ManageFactory {
     }
 
     public void OptionsSkills(ArrayList<String> skills) {
-        System.out.println("--------- SELECT SKILL ---------");
-        System.out.println("1. Mobile");
-        System.out.println("2. IOS");
-        System.out.println("3. Frontend");
-        System.out.println("4. Backend");
-        System.out.println("0. Xong");
+        System.out.println("Chon ky nang");
+        System.out.println('\t' + "1. Mobile");
+        System.out.println('\t' + "2. IOS");
+        System.out.println('\t' + "3. Frontend");
+        System.out.println('\t' + "4. Backend");
+        System.out.println('\t' + "0. Xong");
+        System.out.print("--> ");
         int op = sc.nextInt();
         if (op == 1) {
             skills.add("Mobile");
@@ -489,7 +501,9 @@ public class ManageFactory {
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i) instanceof Intern) {
                 a.get(i).Output();
-                System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
+                System.out.println("Chon hinh thuc");
+                System.out.println('\t' + "1. Them thuc tap sinh" + '\n' + '\t' + "2. Bo qua thuc tap sinh");
+                System.out.print("--> ");
                 int choose = 0;
                 choose = sc.nextInt();
                 if (choose == 1) {
@@ -505,12 +519,13 @@ public class ManageFactory {
     }
 
     public void Trainlearning() {
-        System.out.println("Hoc vien can hoc them nhung ky nang:");
-        System.out.println("--------- SELECT TRAING SKILL ---------");
-        System.out.println("1. Mobile");
-        System.out.println("2. IOS");
-        System.out.println("3. Frontend");
-        System.out.println("4. Backend");
+        System.out.println("--------- TAP HUAN CHO NHAN VIEN THUC TAP ---------");
+        System.out.println("Chon ky nang");
+        System.out.println('\t' + "1. Mobile");
+        System.out.println('\t' + "2. IOS");
+        System.out.println('\t' + "3. Frontend");
+        System.out.println('\t' + "4. Backend");
+        System.out.print("--> ");
         int op = sc.nextInt();
         if (op == 1) {
             tmp(op);
@@ -522,8 +537,10 @@ public class ManageFactory {
             tmp(op);
         }
     }
+
     public void FillterEmployeeByDepartment() {
-        System.out.print("Nhap ten bo phan can loc : ");
+        System.out.println("--------- LOC NHAN VIEN  THEO BO PHAN ---------");
+        System.out.print("Nhap ten bo phan: ");
         String departmentName = sc.next();
         String target = departmentName.toUpperCase();
         for (Employee epl : a) {
