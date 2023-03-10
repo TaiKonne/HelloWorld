@@ -486,10 +486,10 @@ public class ManageFactory {
 
     public void tmp(int op) {
         ArrayList<Intern> intern = new ArrayList<Intern>();
-        System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
         for (int i = 0; i < a.size(); i++) {
             if (a.get(i) instanceof Intern) {
                 a.get(i).Output();
+                System.out.println("1. Them thuc tap sinh | 2. Bo qua thuc tap sinh");
                 int choose = 0;
                 choose = sc.nextInt();
                 if (choose == 1) {
@@ -506,7 +506,6 @@ public class ManageFactory {
 
     public void Trainlearning() {
         System.out.println("Hoc vien can hoc them nhung ky nang:");
-
         System.out.println("--------- SELECT TRAING SKILL ---------");
         System.out.println("1. Mobile");
         System.out.println("2. IOS");
@@ -523,13 +522,11 @@ public class ManageFactory {
             tmp(op);
         }
     }
-
     public void FillterEmployeeByDepartment() {
-        System.out.println("Nhap ten bo phan can loc : ");
-        String departmentName = sc.nextLine();
+        System.out.print("Nhap ten bo phan can loc : ");
+        String departmentName = sc.next();
         String target = departmentName.toUpperCase();
         for (Employee epl : a) {
-
             if (epl.getDepartment().toUpperCase().equals(target)) {
                 epl.Output();
             }

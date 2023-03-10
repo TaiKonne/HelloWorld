@@ -25,7 +25,7 @@ public class dataContext {
                 new Company("company Print", "good", "5 start"),
                 new Company("company software", "bad", "2 start")
             )
-        ),(long)123456789,0, new ArrayList<>(
+        ),(long)123456789,10, new ArrayList<>(
             Arrays.asList(
                 "Mobile",
                 "Frontend"
@@ -42,7 +42,7 @@ public class dataContext {
                 new Company("company outSoure", "good", "5 start"),
                 new Company("company software", "bad", "2 start")
             )
-        ),(long)123456789,0, new ArrayList<>(
+        ),(long)123456789,4, new ArrayList<>(
             Arrays.asList(
                 "Backend",
                 "Frontend"

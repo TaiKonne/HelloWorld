@@ -13,8 +13,8 @@ public class Test_class {
                 + "7. Xem lich su cac cong ty nhan vien da lam viec" + '\n' + "8. Sap xep danh sach nhan vien" + '\n'
                 + "9. Tim kiem cac nhan vien co ki nang phu hop voi du an" + '\n'
                 + "10. Loc nhan vien theo ten bo phan" + '\n'
-                + "11. Chon Intern de duoc training."
-                + "12. Xem lich su thao tac.");
+                + "11. Chon Intern de duoc training" + '\n'
+                + "12. Xem lich su thao tac");
         int n = 0;
         while (true) {
             System.out.print("Nhap lua chon: ");
@@ -24,7 +24,6 @@ public class Test_class {
                 b.Input();
                 LOG x = LOG.getInstance();
                 x.writeLOG(n);
-
             } else if (n == 2) {
                 b.Output();
                 LOG x = LOG.getInstance();
