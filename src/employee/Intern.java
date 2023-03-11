@@ -80,6 +80,13 @@ public class Intern extends Employee {
     public void Output() {
         super.Output();
         System.out.println("Ten chuyen nganh:" + this.getMajor() + '\n' + "Ten truong:" + this.getSchoolname() + '\n'
-                + "Hoc ki: " + this.getSemester());
+                + "Hoc ki: " + this.getSemester());        
+        if (this.StatusIntern == 0) {
+            System.out.print("Chua duoc train");
+        }
+        else
+        {
+            System.out.print("Dang duoc train");
+        }
     }
 }
