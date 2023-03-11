@@ -169,6 +169,7 @@ public class ManageFactory {
                     sc.nextLine();
                     ArrayList<String> newproSkill = new ArrayList<String>();
                     for (int i = 0; i < sl; i++) {
+                        System.out.print('\t'+"Ten ky nang: ");
                         String z = new String();
                         z = sc.nextLine();
                         newproSkill.add(z);
