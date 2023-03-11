@@ -1,9 +1,8 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.*;
 import employee.*;
 import Component.*;
 import data.dataContext;
+
 
 public class ManageFactory {
     private ArrayList<Employee> a = new ArrayList<Employee>();
@@ -81,7 +80,7 @@ public class ManageFactory {
     }
 
     public void RemoveEmployee() {
-        System.out.println("--------- XOA NHAN VIEN ---------");
+        System.out.println("--------- SA THAI NHAN VIEN ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -113,7 +112,7 @@ public class ManageFactory {
         } else {
             if (a.get(k) instanceof Experience) {
                 Experience tmp = (Experience) a.get(k);
-                System.out.println("Chon thong tin can thay doi: ");
+                System.out.println("Chon thong tin can chinh sua: ");
                 System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n'
                         + "7. So Nam kinh nghiem" + '\n' + "8. Ky nang chuyen nganh");
@@ -179,7 +178,7 @@ public class ManageFactory {
                     return;
             } else if (a.get(k) instanceof Fresher) {
                 Fresher tmp = (Fresher) a.get(k);
-                System.out.println("Chon thong tin can thay doi: ");
+                System.out.println("Chon thong tin can chinh sua: ");
                 System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n'
                         + "7. Thoi gian tot nghiep" + '\n' + "8. Loai tot nghiep" + '\n' + "9. Truong tot nghiep");
@@ -250,8 +249,8 @@ public class ManageFactory {
                     return;
             } else {
                 Intern tmp = (Intern) a.get(k);
-                System.out.println("Chon thong tin can thay doi: ");
-                System.out.println("0. Thoat" + '\n' + "1. Ho & ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
+                System.out.println("Chon thong tin can chinh sua: ");
+                System.out.println("0. Thoat" + '\n' + "1. Ho ten" + '\n' + "2. Email" + '\n' + "3. So dien thoai"
                         + '\n' + "4. Ngay sinh" + '\n' + "5. Bang cap" + '\n' + "6. Luong" + '\n' + "7. Chuyen nganh"
                         + '\n' + "8. Truong tot nghiep" + '\n' + "9. Hoc ky dang hoc");
                 System.out.print("--> ");
@@ -336,7 +335,7 @@ public class ManageFactory {
     }
 
     public void WorkHistory() {
-        System.out.println("--------- XEM LICH SU LAM VIEC ---------");
+        System.out.println("--------- LICH SU LAM VIEC CUA NHAN VIEN ---------");
         System.out.print("Nhap Id can tim: ");
         int ids = sc.nextInt();
         int k = -1;
@@ -443,7 +442,7 @@ public class ManageFactory {
     }
 
     public void FindEmployeesForProject() {
-        System.out.println("--------- CHON KY NANG CAN THIET CHO DU AN ---------");
+        System.out.println("--------- TIM KIEM NHAN VIEN CHO DU AN ---------");
         ArrayList<String> skills = new ArrayList<String>();
         this.OptionsSkills(skills);
 
@@ -539,7 +538,7 @@ public class ManageFactory {
     }
 
     public void FillterEmployeeByDepartment() {
-        System.out.println("--------- LOC NHAN VIEN  THEO BO PHAN ---------");
+        System.out.println("--------- LOC NHAN VIEN THEO BO PHAN ---------");
         System.out.print("Nhap ten bo phan: ");
         String departmentName = sc.next();
         String target = departmentName.toUpperCase();

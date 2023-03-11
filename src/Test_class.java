@@ -7,13 +7,13 @@ public class Test_class {
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> a = new ArrayList<Employee>();
         ManageFactory b = new ManageFactory(a);
-        System.out.println("******* LUA CHON MENU THAO TAC ---------");
-        System.out.println("0. Thoat" + '\n' + "1. Them Nhan Vien" + '\n' + "2. In " + '\n' + "3. Sua Thong Tin" + '\n'
-                + "4. Xoa Thong Tin" + '\n' + "5. Tim Kiem Nhan Vien" + '\n' + "6. Tang Luong Nhan Vien" + '\n'
-                + "7. Xem lich su cac cong ty nhan vien da lam viec" + '\n' + "8. Sap xep danh sach nhan vien" + '\n'
-                + "9. Tim kiem cac nhan vien co ki nang phu hop voi du an" + '\n'
-                + "10. Loc nhan vien theo ten bo phan" + '\n'
-                + "11. Chon Intern de duoc training" + '\n'
+        System.out.println("--------- LUA CHON MENU THAO TAC ---------");
+        System.out.println("0. Thoat" + '\n' + "1. Them Nhan Vien" + '\n' + "2. In danh sach nhan vien" + '\n' + "3. Chinh Sua Thong Tin nhan vien" + '\n'
+                + "4. Sa thai nhan vien" + '\n' + "5. Tim Kiem thong tin Nhan Vien" + '\n' + "6. Cap nhat luong Nhan Vien" + '\n'
+                + "7. Lich su lam viec cua nhan vien" + '\n' + "8. Sap xep danh sach nhan vien" + '\n'
+                + "9. Tim kiem nhan vien cho du an" + '\n'
+                + "10. Loc nhan vien theo bo phan" + '\n'
+                + "11. Tap huan cho nhan vien thuc tap" + '\n'
                 + "12. Xem lich su thao tac");
         int n = 0;
         while (true) {
@@ -65,6 +65,7 @@ public class Test_class {
                 LOG x = LOG.getInstance();
                 x.writeLOG(n);
             } else if (n == 12) {
+                System.out.println("--------- LICH SU THAO TAC ---------");
                 try {
                     FileReader mf = new FileReader("log.txt");
                     BufferedReader bf = new BufferedReader(mf);
@@ -76,6 +77,8 @@ public class Test_class {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                LOG x = LOG.getInstance();
+                x.writeLOG(n);
             } else if (n == 0) {
                 System.out.println("--------- THOAT CHUONG TRINH ---------");
                 LOG x = LOG.getInstance();

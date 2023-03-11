@@ -11,3 +11,11 @@
 2023-03-10 23:01:31.015783200 Tim nhan vien phu hop cho du an
 2023-03-10 23:01:39.763706300 Loc nhan vien theo bo phan
 2023-03-10 23:01:50.694582500 Training them cho nhan vien thuc tap
+2023-03-11 09:48:06.490853200 Them san pham 
+2023-03-11 09:48:07.813269200 Them san pham 
+2023-03-11 09:48:09.234619 Them san pham 
+2023-03-11 09:48:28.187864400 In tat ca nhan vien
+2023-03-11 09:48:53.148457 Chinh sua thong tin nhan vien
+2023-03-11 09:51:06.009283700 Them san pham 
+2023-03-11 09:51:36.244706100 Chinh sua thong tin nhan vien
+2023-03-11 09:51:45.675971900 In tat ca nhan vien

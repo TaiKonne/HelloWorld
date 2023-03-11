@@ -54,10 +54,10 @@ public class Experience extends Employee {
     // proskill
     public void Input() {
         super.Input();
-        System.out.println("So nam kinh nghiem: ");
+        System.out.print("So nam kinh nghiem: ");
         int y = sc.nextInt();
 
-        System.out.println("So ky nang chuyen nganh: ");
+        System.out.print("So ky nang chuyen nganh: ");
         int kn = sc.nextInt();
         sc.nextLine();
         ArrayList<String> skill = new ArrayList<String>();
