@@ -59,6 +59,7 @@ public class ManageFactory {
         for (int i = 0; i < a.size(); i++) {
             a.get(i).Output();
         }
+        
     }
 
     public void FindEmployee() // Tim thay la xuat thong tin ra
