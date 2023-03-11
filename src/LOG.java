@@ -133,6 +133,20 @@ class LOG {
                 e.printStackTrace();
             }
         }
-
+    }
+    public void OperationHistory()
+    {
+        System.out.println("--------- LICH SU THAO TAC ---------");
+        try {
+            FileReader mf = new FileReader("log.txt");
+            BufferedReader bf = new BufferedReader(mf);
+            String line;
+            while ((line = bf.readLine()) != null) {
+                System.out.println(line);
+            }
+            bf.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

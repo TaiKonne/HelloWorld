@@ -65,20 +65,9 @@ public class Test_class {
                 LOG x = LOG.getInstance();
                 x.writeLOG(n);
             } else if (n == 12) {
-                System.out.println("--------- LICH SU THAO TAC ---------");
-                try {
-                    FileReader mf = new FileReader("log.txt");
-                    BufferedReader bf = new BufferedReader(mf);
-                    String line;
-                    while ((line = bf.readLine()) != null) {
-                        System.out.println(line);
-                    }
-                    bf.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
                 LOG x = LOG.getInstance();
                 x.writeLOG(n);
+                x.OperationHistory();
             } else if (n == 0) {
                 System.out.println("--------- THOAT CHUONG TRINH ---------");
                 LOG x = LOG.getInstance();
