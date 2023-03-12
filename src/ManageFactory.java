@@ -31,6 +31,7 @@ public class ManageFactory {
             if (type == 1) {
                 // Experience k = new Experience();
                 // k.Input();
+                // a.add(k);
                 for (Experience exp : data.addEmployExperience()) {
                     a.add(exp);
                 }
@@ -320,7 +321,7 @@ public class ManageFactory {
 
     public void UpdateSalary() {
         System.out.println("--------- CAP NHAT LUONG NHAN VIEN ---------");
-        System.out.print("Nam can xet: ");
+        System.out.print("So nam kinh nghiem can xet: ");
         int yy = sc.nextInt();
         System.out.print("Phan tram luong muon tang: ");
         int percent = sc.nextInt();
@@ -329,7 +330,7 @@ public class ManageFactory {
             if (a.get(i) instanceof Experience) {
                 Experience t = (Experience) a.get(i);
                 if (t.getExpyear() >= yy) {
-                    double x = t.getSalary() * percent / 100;
+                    double x = t.getSalary() * percent / 100; // luong hien tai + luong hien tai * x%
                     t.setSalary(t.getSalary() + x);
                 }
             }
@@ -443,7 +444,7 @@ public class ManageFactory {
         }
     }
 
-    public void FindEmployeesForProject() {
+    public void FindEmployeesForProject() { // tìm nhưng nhan vien có kĩ năng phù hợp với dự án
         System.out.println("--------- TIM KIEM NHAN VIEN CHO DU AN ---------");
         ArrayList<String> skills = new ArrayList<String>();
         this.OptionsSkills(skills);

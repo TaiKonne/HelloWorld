@@ -15,7 +15,7 @@ public class dataContext {
     public dataContext() {};
     public ArrayList<Experience> addEmployExperience() {
         ArrayList<Experience> employees = new ArrayList<>();
-        Experience one = new Experience(Employee.generateId,"minh","090930","minh@gmail.com", new DateTime(15, 5, 2003), new ArrayList<>(
+        Experience one = new Experience(Employee.generateId,"Minh","090930","minh@gmail.com", new DateTime(15, 5, 2003), new ArrayList<>(
             Arrays.asList(
                 new Certificate("cer1", "university", "master"),
                 new Certificate("cer2", "ISO", "master")

@@ -45,13 +45,8 @@ public class Experience extends Employee {
     @Override
     public String toString() {
 
-        return "" +
-                "Nam kinh nghiem: " + this.getExpyear() + "| Ky nang chuyen nganh: " + this.getProSkill();
+        return "" + "Nam kinh nghiem: " + this.getExpyear() + "| Ky nang chuyen nganh: " + this.getProSkill();
     }
-
-    // String id, String fullname , String phone , String email, DateTime birthday ,
-    // ArrayList<Certificate> certificates , int expyear , ArrayList<String>
-    // proskill
     public void Input() {
         super.Input();
         System.out.print("So nam kinh nghiem: ");

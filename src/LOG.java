@@ -25,7 +25,7 @@ class LOG {
         else if(k==1) 
         {
             try (FileWriter myWriter = new FileWriter("log.txt",true)) {
-                myWriter.write(java.time.LocalDate.now() + " " + java.time.LocalTime.now() + " " + "Them san pham " + '\n');
+                myWriter.write(java.time.LocalDate.now() + " " + java.time.LocalTime.now() + " " + "Them nhan vien " + '\n');
                 myWriter.close();
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -136,7 +136,7 @@ class LOG {
     }
     public void OperationHistory()
     {
-        System.out.println("--------- LICH SU THAO TAC ---------");
+        System.out.println("--------- LICH SU THAO TAC ---------"); // xem lại lịch sử thao tác
         try {
             FileReader mf = new FileReader("log.txt");
             BufferedReader bf = new BufferedReader(mf);
