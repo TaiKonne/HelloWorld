@@ -7,7 +7,7 @@ import data.dataContext;
 public class ManageFactory {
     private ArrayList<Employee> a = new ArrayList<Employee>();
     Scanner sc = new Scanner(System.in);
-
+    public dataContext data = new dataContext();
     public ManageFactory() {
     }
 
@@ -16,8 +16,7 @@ public class ManageFactory {
     }
 
     public void Input() {
-        System.out.println("--------- THEM NHAN VIEN ---------");
-        dataContext data = new dataContext();
+        System.out.println("--------- THEM NHAN VIEN ---------"); 
         int type;
         do {
             System.out.println('\t' + "Nhap lua chon: " + "1. Experience" + "| 2. Fresher" + "| 3. Intern");
@@ -367,10 +366,6 @@ public class ManageFactory {
         System.out.println('\t' + "1. experience" + '\n' + '\t' + "2. fresher" + '\n' + '\t' + "3.intern");
         System.out.print("--> ");
         int ex_emloyee = sc.nextInt();
-        // ArrayList<Employee> tmp = new ArrayList<Employee>();
-        // ArrayList<Employee> a = new ArrayList<Employee>() Experience Intern Fresher
-        // Collections.swap(ArrList, 1, 2);
-
         if (ex_emloyee == 1) // chọn loại kinh nghiệm của nhân viên Experience
         {
             if (typeSort == 1) { // tăng dần
